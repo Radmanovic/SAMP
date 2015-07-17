@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ********************************************************************************
 *												WILD WEST ROLE-PLAY																		 *
 *														GAMEMODE																					 *
@@ -13,3 +14,7 @@ Radnja ovog Gamemoda pocinje na Divljem Zapadu
 Ideja je da se posle nekog vremena godina menja tj da se krene ka buducnosti
 
 Sa promenom godine dolazi do novih izuma i dodatnih mogucnosti 
+=======
+This is a small project of mine for a San Andreas Multi Player. 
+It's a Roleplay Gamemode. 
+>>>>>>> origin/master
