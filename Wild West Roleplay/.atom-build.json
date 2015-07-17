@@ -4,7 +4,7 @@
 "-D{PROJECT_PATH}", "-r{PROJECT_PATH}\\DOCS\\{FILE_ACTIVE_NAME_BASE}.xhtml", "-;+", "-(+",
 "-d0 -O1" ],
  "sh": false,
- "cwd": "C:/Users/Radma/Desktop/Bone County Roleplay/pawno",
+ "cwd": "C:/Users/Radma/Dropbox/Računar/Github/SAMP/Wild West Roleplay/pawno",
  "env": {
 
   }
