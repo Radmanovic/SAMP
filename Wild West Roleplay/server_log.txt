@@ -1,0 +1,1473 @@
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3c R2, (C)2005-2011 SA-MP Team
+
+[11:43:48] filterscripts = ""  (string)
+[11:43:48] 
+[11:43:48] Server Plugins
+[11:43:48] --------------
+[11:43:48]  Loading plugin: sscanf
+[11:43:48] 
+
+[11:43:48]  ===============================
+
+[11:43:48]       sscanf plugin loaded.     
+
+[11:43:48]    (c) 2009 Alex "Y_Less" Cole
+
+[11:43:48]  ===============================
+
+[11:43:48]   Loaded.
+[11:43:48]  Loading plugin: streamer
+[11:43:48] 
+
+*** Streamer Plugin v2.5.2 by Incognito loaded ***
+
+[11:43:48]   Loaded.
+[11:43:48]  Loaded 2 plugins.
+
+[11:43:48] I couldn't load any gamemode scripts. Please verify your server.cfg
+[11:43:48] It needs a gamemode0 line at the very least.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3c R2, (C)2005-2011 SA-MP Team
+
+[11:43:50] filterscripts = ""  (string)
+[11:43:50] 
+[11:43:50] Server Plugins
+[11:43:50] --------------
+[11:43:50]  Loading plugin: sscanf
+[11:43:50] 
+
+[11:43:50]  ===============================
+
+[11:43:50]       sscanf plugin loaded.     
+
+[11:43:50]    (c) 2009 Alex "Y_Less" Cole
+
+[11:43:50]  ===============================
+
+[11:43:50]   Loaded.
+[11:43:50]  Loading plugin: streamer
+[11:43:50] 
+
+*** Streamer Plugin v2.5.2 by Incognito loaded ***
+
+[11:43:50]   Loaded.
+[11:43:50]  Loaded 2 plugins.
+
+[11:43:50] I couldn't load any gamemode scripts. Please verify your server.cfg
+[11:43:50] It needs a gamemode0 line at the very least.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3c R2, (C)2005-2011 SA-MP Team
+
+[11:43:51] filterscripts = ""  (string)
+[11:43:51] 
+[11:43:51] Server Plugins
+[11:43:51] --------------
+[11:43:51]  Loading plugin: sscanf
+[11:43:51] 
+
+[11:43:51]  ===============================
+
+[11:43:51]       sscanf plugin loaded.     
+
+[11:43:51]    (c) 2009 Alex "Y_Less" Cole
+
+[11:43:51]  ===============================
+
+[11:43:51]   Loaded.
+[11:43:51]  Loading plugin: streamer
+[11:43:51] 
+
+*** Streamer Plugin v2.5.2 by Incognito loaded ***
+
+[11:43:51]   Loaded.
+[11:43:51]  Loaded 2 plugins.
+
+[11:43:51] I couldn't load any gamemode scripts. Please verify your server.cfg
+[11:43:51] It needs a gamemode0 line at the very least.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3c R2, (C)2005-2011 SA-MP Team
+
+[11:44:12] filterscripts = ""  (string)
+[11:44:12] 
+[11:44:12] Server Plugins
+[11:44:12] --------------
+[11:44:12]  Loading plugin: sscanf
+[11:44:12] 
+
+[11:44:12]  ===============================
+
+[11:44:12]       sscanf plugin loaded.     
+
+[11:44:12]    (c) 2009 Alex "Y_Less" Cole
+
+[11:44:12]  ===============================
+
+[11:44:12]   Loaded.
+[11:44:12]  Loading plugin: streamer
+[11:44:12] 
+
+*** Streamer Plugin v2.5.2 by Incognito loaded ***
+
+[11:44:12]   Loaded.
+[11:44:12]  Loaded 2 plugins.
+
+[11:44:12] 
+[11:44:12] Filter Scripts
+[11:44:12] ---------------
+[11:44:12]   Loaded 0 filter scripts.
+
+[11:44:12]  
+[11:44:12]  ======================================= 
+[11:44:12]  |                                     | 
+[11:44:12]  |        YSI version 1.04.0000        | 
+[11:44:12]  |        By Alex "Y_Less" Cole        | 
+[11:44:12]  |                                     | 
+[11:44:12]  |  Checking the latest YSI version..  | 
+[11:44:12]  |                                     | 
+[11:44:12]  ======================================= 
+[11:44:12]  
+[11:44:12]      public LoadHouses has been successfully completed.
+[11:44:12]      public LoadCar has been successfully completed.
+[11:44:12]      public LoadDCars has been successfully completed.
+[11:44:12] **************************
+[11:44:12]    Bone County Roleplay   
+[11:44:12]          Copyright        
+[11:44:12]      Jack Leslie - 2011   
+[11:44:12]       Gamemode Loaded     
+[11:44:12] **************************
+[11:44:12] Number of vehicle models: 6
+[11:44:14]  
+[11:44:14]  ====================================== 
+[11:44:14]  |                                    | 
+[11:44:14]  |  Congratulations! You are running  | 
+[11:44:14]  |     the latest version of YSI!     | 
+[11:44:14]  |                                    | 
+[11:44:14]  ====================================== 
+[11:44:14]  
+[11:44:16] --- Server Shutting Down.
+[11:44:16] 
+
+[11:44:16]  ===============================
+
+[11:44:16]      sscanf plugin unloaded.    
+
+[11:44:16]  ===============================
+
+[11:44:16] 
+
+*** Streamer Plugin v2.5.2 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[13:36:21] filterscripts = ""  (string)
+[13:36:21] 
+[13:36:21] Server Plugins
+[13:36:21] --------------
+[13:36:21]  Loading plugin: sscanf
+[13:36:21] 
+
+[13:36:21]  ===============================
+
+[13:36:21]       sscanf plugin loaded.     
+
+[13:36:21]          Version:  2.8.1        
+
+[13:36:21]    (c) 2012 Alex "Y_Less" Cole  
+
+[13:36:21]  ===============================
+
+[13:36:21]   Loaded.
+[13:36:21]  Loading plugin: streamer
+[13:36:21] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[13:36:21]   Loaded.
+[13:36:21]  Loaded 2 plugins.
+
+[13:36:21] 
+[13:36:21] Filterscripts
+[13:36:21] ---------------
+[13:36:21]   Loaded 0 filterscripts.
+
+[13:36:21] *** Streamer Plugin: Warning: Obsolete or invalid native "Streamer_RegisterInterface" found (script might need to be recompiled with the latest include file)
+[13:36:21] *** Streamer Plugin: Warning: Obsolete or invalid native "Streamer_AddPlayer" found (script might need to be recompiled with the latest include file)
+[13:36:21] *** Streamer Plugin: Warning: Obsolete or invalid native "Streamer_RemovePlayer" found (script might need to be recompiled with the latest include file)
+[13:36:21] *** Streamer Plugin: Warning: Obsolete or invalid native "Streamer_VerifyPickup" found (script might need to be recompiled with the latest include file)
+[13:36:21] *** Streamer Plugin: Warning: Obsolete or invalid native "Streamer_VerifyCheckpoint" found (script might need to be recompiled with the latest include file)
+[13:36:21] *** Streamer Plugin: Warning: Include file version (unknown version) does not match plugin version (0x27201) (script might need to be recompiled with the latest include file)
+[13:36:21]  
+[13:36:21]  ======================================= 
+[13:36:21]  |                                     | 
+[13:36:21]  |        YSI version 1.04.0000        | 
+[13:36:21]  |        By Alex "Y_Less" Cole        | 
+[13:36:21]  |                                     | 
+[13:36:21]  |  Checking the latest YSI version..  | 
+[13:36:21]  |                                     | 
+[13:36:21]  ======================================= 
+[13:36:21]  
+[13:36:21]      public LoadHouses has been successfully completed.
+[13:36:21]      public LoadCar has been successfully completed.
+[13:36:21]      public LoadDCars has been successfully completed.
+[13:36:21] **************************
+[13:36:21]    Bone County Roleplay   
+[13:36:21]          Copyright        
+[13:36:21]      Jack Leslie - 2011   
+[13:36:21]       Gamemode Loaded     
+[13:36:21] **************************
+[13:36:21] Number of vehicle models: 6
+[13:36:22]  
+[13:36:22]  ========================================== 
+[13:36:22]  |                                        | 
+[13:36:22]  |  A new version (v3.09.0684) of YSI is  | 
+[13:36:22]  |            available from:             | 
+[13:36:22]  |                                        | 
+[13:36:22]  |     www.y-less.com/YSI/YSI_1.0.zip     | 
+[13:36:22]  |                                        | 
+[13:36:22]  | Changelog:                             | 
+[13:36:22]  |                                        | 
+[13:36:22]  |   3.00.0000:                           | 
+[13:36:22]  |                                        | 
+[13:36:22]  |   YSI 3.0 released!  Now includes the  | 
+[13:36:22]  | "y_text" library for better messages,  | 
+[13:36:22]  | and a reworked "y_classes" library.    | 
+[13:36:22]  | Largely documented here                | 
+[13:36:22]  | "http://forum.sa-mp.com/showthread.php | 
+[13:36:22]  | ?t=321092".                            | 
+[13:36:22]  |                                        | 
+[13:36:22]  |   3.01.0002:                           | 
+[13:36:22]  |                                        | 
+[13:36:22]  |   Small fixes to "y_text" and          | 
+[13:36:22]  | "y_classes".                           | 
+[13:36:22]  |                                        | 
+[13:36:22]  |   3.09.0684:                           | 
+[13:36:22]  |                                        | 
+[13:36:22]  |   Reverted to old download location.   | 
+[13:36:22]  | Improved (and fixed) version checks;   | 
+[13:36:22]  | added y_bitmap, y_areas, y_races,      | 
+[13:36:22]  | y_zonenames, better documentation;     | 
+[13:36:22]  | MANY other bug fixes - see the github  | 
+[13:36:22]  | repository for more details:           | 
+[13:36:22]  |                                        | 
+[13:36:22]  ========================================== 
+[13:36:22]  
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[13:37:29] filterscripts = ""  (string)
+[13:37:29] 
+[13:37:29] Server Plugins
+[13:37:29] --------------
+[13:37:29]  Loading plugin: sscanf
+[13:37:29] 
+
+[13:37:29]  ===============================
+
+[13:37:29]       sscanf plugin loaded.     
+
+[13:37:29]          Version:  2.8.1        
+
+[13:37:29]    (c) 2012 Alex "Y_Less" Cole  
+
+[13:37:29]  ===============================
+
+[13:37:29]   Loaded.
+[13:37:29]  Loading plugin: streamer
+[13:37:29] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[13:37:29]   Loaded.
+[13:37:29]  Loaded 2 plugins.
+
+[13:37:29] 
+[13:37:29] Filterscripts
+[13:37:29] ---------------
+[13:37:29]   Loaded 0 filterscripts.
+
+[13:37:29] *** Streamer Plugin: Warning: Obsolete or invalid native "Streamer_RegisterInterface" found (script might need to be recompiled with the latest include file)
+[13:37:29] *** Streamer Plugin: Warning: Obsolete or invalid native "Streamer_AddPlayer" found (script might need to be recompiled with the latest include file)
+[13:37:29] *** Streamer Plugin: Warning: Obsolete or invalid native "Streamer_RemovePlayer" found (script might need to be recompiled with the latest include file)
+[13:37:29] *** Streamer Plugin: Warning: Obsolete or invalid native "Streamer_VerifyPickup" found (script might need to be recompiled with the latest include file)
+[13:37:29] *** Streamer Plugin: Warning: Obsolete or invalid native "Streamer_VerifyCheckpoint" found (script might need to be recompiled with the latest include file)
+[13:37:29] *** Streamer Plugin: Warning: Include file version (unknown version) does not match plugin version (0x27201) (script might need to be recompiled with the latest include file)
+[13:37:29]  
+[13:37:29]  ======================================= 
+[13:37:29]  |                                     | 
+[13:37:29]  |        YSI version 1.04.0000        | 
+[13:37:29]  |        By Alex "Y_Less" Cole        | 
+[13:37:29]  |                                     | 
+[13:37:29]  |  Checking the latest YSI version..  | 
+[13:37:29]  |                                     | 
+[13:37:29]  ======================================= 
+[13:37:29]  
+[13:37:30]      public LoadHouses has been successfully completed.
+[13:37:30]      public LoadCar has been successfully completed.
+[13:37:30]      public LoadDCars has been successfully completed.
+[13:37:30] **************************
+[13:37:30]    Bone County Roleplay   
+[13:37:30]          Copyright        
+[13:37:30]      Jack Leslie - 2011   
+[13:37:30]       Gamemode Loaded     
+[13:37:30] **************************
+[13:37:30] Number of vehicle models: 6
+[13:37:30]  
+[13:37:30]  ========================================== 
+[13:37:30]  |                                        | 
+[13:37:30]  |  A new version (v3.09.0684) of YSI is  | 
+[13:37:30]  |            available from:             | 
+[13:37:30]  |                                        | 
+[13:37:30]  |     www.y-less.com/YSI/YSI_1.0.zip     | 
+[13:37:30]  |                                        | 
+[13:37:30]  | Changelog:                             | 
+[13:37:30]  |                                        | 
+[13:37:30]  |   3.00.0000:                           | 
+[13:37:30]  |                                        | 
+[13:37:30]  |   YSI 3.0 released!  Now includes the  | 
+[13:37:30]  | "y_text" library for better messages,  | 
+[13:37:30]  | and a reworked "y_classes" library.    | 
+[13:37:30]  | Largely documented here                | 
+[13:37:30]  | "http://forum.sa-mp.com/showthread.php | 
+[13:37:30]  | ?t=321092".                            | 
+[13:37:30]  |                                        | 
+[13:37:30]  |   3.01.0002:                           | 
+[13:37:30]  |                                        | 
+[13:37:30]  |   Small fixes to "y_text" and          | 
+[13:37:30]  | "y_classes".                           | 
+[13:37:30]  |                                        | 
+[13:37:30]  |   3.09.0684:                           | 
+[13:37:30]  |                                        | 
+[13:37:30]  |   Reverted to old download location.   | 
+[13:37:30]  | Improved (and fixed) version checks;   | 
+[13:37:30]  | added y_bitmap, y_areas, y_races,      | 
+[13:37:30]  | y_zonenames, better documentation;     | 
+[13:37:30]  | MANY other bug fixes - see the github  | 
+[13:37:30]  | repository for more details:           | 
+[13:37:30]  |                                        | 
+[13:37:30]  ========================================== 
+[13:37:30]  
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[13:50:29] filterscripts = ""  (string)
+[13:50:29] 
+[13:50:29] Server Plugins
+[13:50:29] --------------
+[13:50:29]  Loading plugin: sscanf
+[13:50:29] 
+
+[13:50:29]  ===============================
+
+[13:50:29]       sscanf plugin loaded.     
+
+[13:50:29]          Version:  2.8.1        
+
+[13:50:29]    (c) 2012 Alex "Y_Less" Cole  
+
+[13:50:29]  ===============================
+
+[13:50:29]   Loaded.
+[13:50:29]  Loading plugin: streamer
+[13:50:29] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[13:50:29]   Loaded.
+[13:50:29]  Loaded 2 plugins.
+
+[13:50:29] 
+[13:50:29] Filterscripts
+[13:50:29] ---------------
+[13:50:29]   Loaded 0 filterscripts.
+
+[13:50:29]  
+[13:50:29]  
+[13:50:29]  
+[13:50:29]  ======================================= 
+[13:50:29]  |                                     | 
+[13:50:29]  |        YSI version 3.09.0684        | 
+[13:50:29]  |        By Alex "Y_Less" Cole        | 
+[13:50:29]  |                                     | 
+[13:50:29]  ======================================= 
+[13:50:29]  
+[13:50:29]  
+[13:50:29]  
+[13:50:29]      public LoadHouses has been successfully completed.
+[13:50:29]      public LoadCar has been successfully completed.
+[13:50:29]      public LoadDCars has been successfully completed.
+[13:50:29] **************************
+[13:50:29]    Bone County Roleplay   
+[13:50:29]          Copyright        
+[13:50:29]      Jack Leslie - 2011   
+[13:50:29]       Gamemode Loaded     
+[13:50:29] **************************
+[13:50:29] Number of vehicle models: 6
+[13:50:59] Incoming connection: 127.0.0.1:59329
+[13:50:59] [join] Jack_Leslie has joined the server (0:127.0.0.1)
+[13:51:05] [death] Jack_Leslie died 255
+[13:51:19] *** YSI Error: INI_Open could not find or create file /citizens/Jack_Leslie.ini
+[13:52:53] [part] Jack_Leslie has left the server (0:1)
+[13:53:30] Incoming connection: 127.0.0.1:56886
+[13:53:30] [join] Jack_Leslie has joined the server (0:127.0.0.1)
+[13:53:49] [part] Jack_Leslie has left the server (0:1)
+[13:55:09] Incoming connection: 127.0.0.1:60823
+[13:55:09] [join] Jack_Leslie has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[13:59:11] filterscripts = ""  (string)
+[13:59:11] 
+[13:59:11] Server Plugins
+[13:59:11] --------------
+[13:59:11]  Loading plugin: sscanf
+[13:59:11] 
+
+[13:59:11]  ===============================
+
+[13:59:11]       sscanf plugin loaded.     
+
+[13:59:11]          Version:  2.8.1        
+
+[13:59:11]    (c) 2012 Alex "Y_Less" Cole  
+
+[13:59:11]  ===============================
+
+[13:59:11]   Loaded.
+[13:59:11]  Loading plugin: streamer
+[13:59:11] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[13:59:11]   Loaded.
+[13:59:11]  Loaded 2 plugins.
+
+[13:59:11] 
+[13:59:11] Filterscripts
+[13:59:11] ---------------
+[13:59:11]   Loaded 0 filterscripts.
+
+[13:59:11]  
+[13:59:11]  
+[13:59:11]  
+[13:59:11]  ======================================= 
+[13:59:11]  |                                     | 
+[13:59:11]  |        YSI version 3.09.0684        | 
+[13:59:11]  |        By Alex "Y_Less" Cole        | 
+[13:59:11]  |                                     | 
+[13:59:11]  ======================================= 
+[13:59:11]  
+[13:59:11]  
+[13:59:11]  
+[13:59:11]      public LoadHouses has been successfully completed.
+[13:59:11]      public LoadCar has been successfully completed.
+[13:59:11]      public LoadDCars has been successfully completed.
+[13:59:11] **************************
+[13:59:11]    Bone County Roleplay   
+[13:59:11]          Copyright        
+[13:59:11]      Jack Leslie - 2011   
+[13:59:11]       Gamemode Loaded     
+[13:59:11] **************************
+[13:59:11] Number of vehicle models: 6
+[13:59:12]  
+[13:59:12]  ========================================== 
+[13:59:12]  |                                        | 
+[13:59:12]  |  A new version (v<html>
+  ) of YSI is  | 
+[13:59:12]  |            available from:             | 
+[13:59:12]  |                                        | 
+[13:59:12]  |     www.y-less.com/YSI/YSI_1.0.zip     | 
+[13:59:12]  |                                        | 
+[13:59:12]  ========================================== 
+[13:59:12]  
+[13:59:36] Incoming connection: 127.0.0.1:54362
+[13:59:36] [join] Jack_Leslie has joined the server (0:127.0.0.1)
+[13:59:56] [part] Jack_Leslie has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[14:00:45] filterscripts = ""  (string)
+[14:00:45] 
+[14:00:45] Server Plugins
+[14:00:45] --------------
+[14:00:45]  Loading plugin: sscanf
+[14:00:45] 
+
+[14:00:45]  ===============================
+
+[14:00:45]       sscanf plugin loaded.     
+
+[14:00:45]          Version:  2.8.1        
+
+[14:00:45]    (c) 2012 Alex "Y_Less" Cole  
+
+[14:00:45]  ===============================
+
+[14:00:45]   Loaded.
+[14:00:45]  Loading plugin: streamer
+[14:00:45] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[14:00:45]   Loaded.
+[14:00:45]  Loaded 2 plugins.
+
+[14:00:45] 
+[14:00:45] Filterscripts
+[14:00:45] ---------------
+[14:00:45]   Loaded 0 filterscripts.
+
+[14:00:45]  
+[14:00:45]  
+[14:00:45]  
+[14:00:45]  ======================================= 
+[14:00:45]  |                                     | 
+[14:00:45]  |        YSI version 3.09.0684        | 
+[14:00:45]  |        By Alex "Y_Less" Cole        | 
+[14:00:45]  |                                     | 
+[14:00:45]  ======================================= 
+[14:00:45]  
+[14:00:45]  
+[14:00:45]  
+[14:00:45]      public LoadHouses has been successfully completed.
+[14:00:45]      public LoadCar has been successfully completed.
+[14:00:45]      public LoadDCars has been successfully completed.
+[14:00:45] **************************
+[14:00:45]    Bone County Roleplay   
+[14:00:45]          Copyright        
+[14:00:45]      Jack Leslie - 2011   
+[14:00:45]       Gamemode Loaded     
+[14:00:45] **************************
+[14:00:45] Number of vehicle models: 6
+[14:00:55]  
+[14:00:55]  ========================================== 
+[14:00:55]  |                                        | 
+[14:00:55]  |  A new version (v<html>
+  ) of YSI is  | 
+[14:00:55]  |            available from:             | 
+[14:00:55]  |                                        | 
+[14:00:55]  |     www.y-less.com/YSI/YSI_1.0.zip     | 
+[14:00:55]  |                                        | 
+[14:00:55]  ========================================== 
+[14:00:55]  
+[14:01:07] Incoming connection: 127.0.0.1:50830
+[14:01:07] [join] Jack_Leslie has joined the server (0:127.0.0.1)
+[14:01:26]  
+[14:01:26]  
+[14:01:26]  
+[14:01:26]  ======================================= 
+[14:01:26]  |                                     | 
+[14:01:26]  |        YSI version 3.09.0684        | 
+[14:01:26]  |        By Alex "Y_Less" Cole        | 
+[14:01:26]  |                                     | 
+[14:01:26]  ======================================= 
+[14:01:26]  
+[14:01:26]  
+[14:01:27]  
+[14:01:27]      public LoadHouses has been successfully completed.
+[14:01:27]      public LoadCar has been successfully completed.
+[14:01:27]      public LoadDCars has been successfully completed.
+[14:01:27] **************************
+[14:01:27]    Bone County Roleplay   
+[14:01:27]          Copyright        
+[14:01:27]      Jack Leslie - 2011   
+[14:01:27]       Gamemode Loaded     
+[14:01:27] **************************
+[14:01:27] Number of vehicle models: 6
+[14:01:30]  
+[14:01:30]  ========================================== 
+[14:01:30]  |                                        | 
+[14:01:30]  |  A new version (v<html>
+  ) of YSI is  | 
+[14:01:30]  |            available from:             | 
+[14:01:30]  |                                        | 
+[14:01:30]  |     www.y-less.com/YSI/YSI_1.0.zip     | 
+[14:01:30]  |                                        | 
+[14:01:30]  ========================================== 
+[14:01:30]  
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[14:02:52] filterscripts = ""  (string)
+[14:02:52] 
+[14:02:52] Server Plugins
+[14:02:52] --------------
+[14:02:52]  Loading plugin: sscanf
+[14:02:52] 
+
+[14:02:52]  ===============================
+
+[14:02:52]       sscanf plugin loaded.     
+
+[14:02:52]          Version:  2.8.1        
+
+[14:02:52]    (c) 2012 Alex "Y_Less" Cole  
+
+[14:02:52]  ===============================
+
+[14:02:52]   Loaded.
+[14:02:52]  Loading plugin: streamer
+[14:02:52] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[14:02:52]   Loaded.
+[14:02:52]  Loaded 2 plugins.
+
+[14:02:52] 
+[14:02:52] Filterscripts
+[14:02:52] ---------------
+[14:02:52]   Loaded 0 filterscripts.
+
+[14:02:52]  
+[14:02:52]  
+[14:02:52]  
+[14:02:52]  ======================================= 
+[14:02:52]  |                                     | 
+[14:02:52]  |        YSI version 3.09.0684        | 
+[14:02:52]  |        By Alex "Y_Less" Cole        | 
+[14:02:52]  |                                     | 
+[14:02:52]  ======================================= 
+[14:02:52]  
+[14:02:52]  
+[14:02:52]  
+[14:02:52]      public LoadHouses has been successfully completed.
+[14:02:52]      public LoadCar has been successfully completed.
+[14:02:52]      public LoadDCars has been successfully completed.
+[14:02:52] **************************
+[14:02:52]    Bone County Roleplay   
+[14:02:52]          Copyright        
+[14:02:52]      Jack Leslie - 2011   
+[14:02:52]       Gamemode Loaded     
+[14:02:52] **************************
+[14:02:52] Number of vehicle models: 6
+[14:02:54] Incoming connection: 127.0.0.1:60040
+[14:02:54] [join] Jack_Leslie has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[14:04:05] filterscripts = ""  (string)
+[14:04:05] 
+[14:04:05] Server Plugins
+[14:04:05] --------------
+[14:04:05]  Loading plugin: sscanf
+[14:04:05] 
+
+[14:04:05]  ===============================
+
+[14:04:05]       sscanf plugin loaded.     
+
+[14:04:05]          Version:  2.8.1        
+
+[14:04:05]    (c) 2012 Alex "Y_Less" Cole  
+
+[14:04:05]  ===============================
+
+[14:04:05]   Loaded.
+[14:04:05]  Loading plugin: streamer
+[14:04:05] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[14:04:05]   Loaded.
+[14:04:05]  Loaded 2 plugins.
+
+[14:04:05] 
+[14:04:05] Filterscripts
+[14:04:05] ---------------
+[14:04:05]   Loaded 0 filterscripts.
+
+[14:04:06]  
+[14:04:06]  
+[14:04:06]  
+[14:04:06]  ======================================= 
+[14:04:06]  |                                     | 
+[14:04:06]  |        YSI version 3.09.0684        | 
+[14:04:06]  |        By Alex "Y_Less" Cole        | 
+[14:04:06]  |                                     | 
+[14:04:06]  ======================================= 
+[14:04:06]  
+[14:04:06]  
+[14:04:06]  
+[14:04:06]      public LoadHouses has been successfully completed.
+[14:04:06]      public LoadCar has been successfully completed.
+[14:04:06]      public LoadDCars has been successfully completed.
+[14:04:06] **************************
+[14:04:06]    Bone County Roleplay   
+[14:04:06]          Copyright        
+[14:04:06]      Jack Leslie - 2011   
+[14:04:06]       Gamemode Loaded     
+[14:04:06] **************************
+[14:04:06] Number of vehicle models: 6
+[14:04:09]  
+[14:04:09]  ========================================== 
+[14:04:09]  |                                        | 
+[14:04:09]  |  A new version (v<html>
+  ) of YSI is  | 
+[14:04:09]  |            available from:             | 
+[14:04:09]  |                                        | 
+[14:04:09]  |     www.y-less.com/YSI/YSI_1.0.zip     | 
+[14:04:09]  |                                        | 
+[14:04:09]  ========================================== 
+[14:04:09]  
+[14:04:29] Incoming connection: 127.0.0.1:61605
+[14:04:29] [join] Jack_Leslie has joined the server (0:127.0.0.1)
+[14:05:26] [part] Jack_Leslie has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[14:05:57] filterscripts = ""  (string)
+[14:05:57] 
+[14:05:57] Server Plugins
+[14:05:57] --------------
+[14:05:57]  Loading plugin: sscanf
+[14:05:57] 
+
+[14:05:57]  ===============================
+
+[14:05:57]       sscanf plugin loaded.     
+
+[14:05:57]          Version:  2.8.1        
+
+[14:05:57]    (c) 2012 Alex "Y_Less" Cole  
+
+[14:05:57]  ===============================
+
+[14:05:57]   Loaded.
+[14:05:57]  Loading plugin: streamer
+[14:05:57] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[14:05:57]   Loaded.
+[14:05:57]  Loaded 2 plugins.
+
+[14:05:57] 
+[14:05:57] Filterscripts
+[14:05:57] ---------------
+[14:05:57]   Loaded 0 filterscripts.
+
+[14:05:57]  
+[14:05:57]  
+[14:05:57]  
+[14:05:57]  ======================================= 
+[14:05:57]  |                                     | 
+[14:05:57]  |        YSI version 3.09.0684        | 
+[14:05:57]  |        By Alex "Y_Less" Cole        | 
+[14:05:57]  |                                     | 
+[14:05:57]  ======================================= 
+[14:05:57]  
+[14:05:57]  
+[14:05:57]  
+[14:05:57]      public LoadHouses has been successfully completed.
+[14:05:57]      public LoadCar has been successfully completed.
+[14:05:57]      public LoadDCars has been successfully completed.
+[14:05:57] **************************
+[14:05:57]    Bone County Roleplay   
+[14:05:57]          Copyright        
+[14:05:57]      Jack Leslie - 2011   
+[14:05:57]       Gamemode Loaded     
+[14:05:57] **************************
+[14:05:57] Number of vehicle models: 6
+[14:05:58]  
+[14:05:58]  ========================================== 
+[14:05:58]  |                                        | 
+[14:05:58]  |  A new version (v<html>
+  ) of YSI is  | 
+[14:05:58]  |            available from:             | 
+[14:05:58]  |                                        | 
+[14:05:58]  |     www.y-less.com/YSI/YSI_1.0.zip     | 
+[14:05:58]  |                                        | 
+[14:05:58]  ========================================== 
+[14:05:58]  
+[14:06:18] Incoming connection: 127.0.0.1:64478
+[14:06:19] [join] Jack_Leslie has joined the server (0:127.0.0.1)
+[14:06:27] [part] Jack_Leslie has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[14:06:54] filterscripts = ""  (string)
+[14:06:54] 
+[14:06:54] Server Plugins
+[14:06:54] --------------
+[14:06:54]  Loading plugin: sscanf
+[14:06:54] 
+
+[14:06:54]  ===============================
+
+[14:06:54]       sscanf plugin loaded.     
+
+[14:06:54]          Version:  2.8.1        
+
+[14:06:54]    (c) 2012 Alex "Y_Less" Cole  
+
+[14:06:54]  ===============================
+
+[14:06:54]   Loaded.
+[14:06:54]  Loading plugin: streamer
+[14:06:54] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[14:06:54]   Loaded.
+[14:06:54]  Loaded 2 plugins.
+
+[14:06:54] 
+[14:06:54] Filterscripts
+[14:06:54] ---------------
+[14:06:54]   Loaded 0 filterscripts.
+
+[14:06:54]  
+[14:06:54]  
+[14:06:54]  
+[14:06:54]  ======================================= 
+[14:06:54]  |                                     | 
+[14:06:54]  |        YSI version 3.09.0684        | 
+[14:06:54]  |        By Alex "Y_Less" Cole        | 
+[14:06:54]  |                                     | 
+[14:06:54]  ======================================= 
+[14:06:54]  
+[14:06:54]  
+[14:06:55]  
+[14:06:55]      public LoadHouses has been successfully completed.
+[14:06:55]      public LoadCar has been successfully completed.
+[14:06:55]      public LoadDCars has been successfully completed.
+[14:06:55] **************************
+[14:06:55]    Bone County Roleplay   
+[14:06:55]          Copyright        
+[14:06:55]      Jack Leslie - 2011   
+[14:06:55]       Gamemode Loaded     
+[14:06:55] **************************
+[14:06:55] Number of vehicle models: 6
+[14:06:55]  
+[14:06:55]  ========================================== 
+[14:06:55]  |                                        | 
+[14:06:55]  |  A new version (v<html>
+  ) of YSI is  | 
+[14:06:55]  |            available from:             | 
+[14:06:55]  |                                        | 
+[14:06:55]  |     www.y-less.com/YSI/YSI_1.0.zip     | 
+[14:06:55]  |                                        | 
+[14:06:55]  ========================================== 
+[14:06:55]  
+[14:07:16] Incoming connection: 127.0.0.1:49317
+[14:07:16] [join] Jack_Leslie has joined the server (0:127.0.0.1)
+[14:07:24] what
+[14:08:26] [part] Jack_Leslie has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[14:08:46] filterscripts = ""  (string)
+[14:08:46] 
+[14:08:46] Server Plugins
+[14:08:46] --------------
+[14:08:46]  Loading plugin: sscanf
+[14:08:46] 
+
+[14:08:46]  ===============================
+
+[14:08:46]       sscanf plugin loaded.     
+
+[14:08:46]          Version:  2.8.1        
+
+[14:08:46]    (c) 2012 Alex "Y_Less" Cole  
+
+[14:08:46]  ===============================
+
+[14:08:46]   Loaded.
+[14:08:46]  Loading plugin: streamer
+[14:08:46] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[14:08:46]   Loaded.
+[14:08:46]  Loaded 2 plugins.
+
+[14:08:46] 
+[14:08:46] Filterscripts
+[14:08:46] ---------------
+[14:08:46]   Loaded 0 filterscripts.
+
+[14:08:46]  
+[14:08:46]  
+[14:08:46]  
+[14:08:46]  ======================================= 
+[14:08:46]  |                                     | 
+[14:08:46]  |        YSI version 3.09.0684        | 
+[14:08:46]  |        By Alex "Y_Less" Cole        | 
+[14:08:46]  |                                     | 
+[14:08:46]  ======================================= 
+[14:08:46]  
+[14:08:46]  
+[14:08:46]  
+[14:08:46]      public LoadHouses has been successfully completed.
+[14:08:46]      public LoadCar has been successfully completed.
+[14:08:46]      public LoadDCars has been successfully completed.
+[14:08:46] **************************
+[14:08:46]    Bone County Roleplay   
+[14:08:46]          Copyright        
+[14:08:46]      Jack Leslie - 2011   
+[14:08:46]       Gamemode Loaded     
+[14:08:46] **************************
+[14:08:46] Number of vehicle models: 6
+[14:08:46]  
+[14:08:46]  ========================================== 
+[14:08:46]  |                                        | 
+[14:08:46]  |  A new version (v<html>
+  ) of YSI is  | 
+[14:08:46]  |            available from:             | 
+[14:08:46]  |                                        | 
+[14:08:46]  |     www.y-less.com/YSI/YSI_1.0.zip     | 
+[14:08:46]  |                                        | 
+[14:08:46]  ========================================== 
+[14:08:46]  
+[14:09:07] Incoming connection: 127.0.0.1:58964
+[14:09:08] [join] Jack_Leslie has joined the server (0:127.0.0.1)
+[14:09:19] [part] Jack_Leslie has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[14:13:00] filterscripts = ""  (string)
+[14:13:00] 
+[14:13:00] Server Plugins
+[14:13:00] --------------
+[14:13:00]  Loading plugin: sscanf
+[14:13:00] 
+
+[14:13:00]  ===============================
+
+[14:13:00]       sscanf plugin loaded.     
+
+[14:13:00]          Version:  2.8.1        
+
+[14:13:00]    (c) 2012 Alex "Y_Less" Cole  
+
+[14:13:00]  ===============================
+
+[14:13:00]   Loaded.
+[14:13:00]  Loading plugin: streamer
+[14:13:00] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[14:13:00]   Loaded.
+[14:13:00]  Loaded 2 plugins.
+
+[14:13:00] 
+[14:13:00] Filterscripts
+[14:13:00] ---------------
+[14:13:00]   Loaded 0 filterscripts.
+
+[14:13:00]  
+[14:13:00]  
+[14:13:00]  
+[14:13:00]  ======================================= 
+[14:13:00]  |                                     | 
+[14:13:00]  |        YSI version 3.09.0684        | 
+[14:13:00]  |        By Alex "Y_Less" Cole        | 
+[14:13:00]  |                                     | 
+[14:13:00]  ======================================= 
+[14:13:00]  
+[14:13:00]  
+[14:13:00]  
+[14:13:00]      public LoadHouses has been successfully completed.
+[14:13:00]      public LoadCar has been successfully completed.
+[14:13:00]      public LoadDCars has been successfully completed.
+[14:13:00] **************************
+[14:13:00]    Bone County Roleplay   
+[14:13:00]          Copyright        
+[14:13:00]      Jack Leslie - 2011   
+[14:13:00]       Gamemode Loaded     
+[14:13:00] **************************
+[14:13:00] Number of vehicle models: 6
+[14:13:00]  
+[14:13:00]  ========================================== 
+[14:13:00]  |                                        | 
+[14:13:00]  |  A new version (v<html>
+  ) of YSI is  | 
+[14:13:00]  |            available from:             | 
+[14:13:00]  |                                        | 
+[14:13:00]  |     www.y-less.com/YSI/YSI_1.0.zip     | 
+[14:13:00]  |                                        | 
+[14:13:00]  ========================================== 
+[14:13:00]  
+[14:13:22] Incoming connection: 127.0.0.1:52773
+[14:13:22] [join] Jack_Leslie has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[14:18:11] filterscripts = ""  (string)
+[14:18:11] 
+[14:18:11] Server Plugins
+[14:18:11] --------------
+[14:18:11]  Loading plugin: sscanf
+[14:18:11] 
+
+[14:18:11]  ===============================
+
+[14:18:11]       sscanf plugin loaded.     
+
+[14:18:11]          Version:  2.8.1        
+
+[14:18:11]    (c) 2012 Alex "Y_Less" Cole  
+
+[14:18:11]  ===============================
+
+[14:18:11]   Loaded.
+[14:18:11]  Loading plugin: streamer
+[14:18:11] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[14:18:11]   Loaded.
+[14:18:11]  Loaded 2 plugins.
+
+[14:18:11] 
+[14:18:11] Filterscripts
+[14:18:11] ---------------
+[14:18:11]   Loaded 0 filterscripts.
+
+[14:18:11]  
+[14:18:11]  
+[14:18:11]  
+[14:18:11]  ======================================= 
+[14:18:11]  |                                     | 
+[14:18:11]  |        YSI version 3.09.0684        | 
+[14:18:11]  |        By Alex "Y_Less" Cole        | 
+[14:18:11]  |                                     | 
+[14:18:11]  ======================================= 
+[14:18:11]  
+[14:18:11]  
+[14:18:11]  
+[14:18:11]      public LoadHouses has been successfully completed.
+[14:18:11]      public LoadCar has been successfully completed.
+[14:18:11]      public LoadDCars has been successfully completed.
+[14:18:11] **************************
+[14:18:11]    Bone County Roleplay   
+[14:18:11]          Copyright        
+[14:18:11]      Jack Leslie - 2011   
+[14:18:11]       Gamemode Loaded     
+[14:18:11] **************************
+[14:18:11] Number of vehicle models: 6
+[14:18:12]  
+[14:18:12]  ========================================== 
+[14:18:12]  |                                        | 
+[14:18:12]  |  A new version (v<html>
+  ) of YSI is  | 
+[14:18:12]  |            available from:             | 
+[14:18:12]  |                                        | 
+[14:18:12]  |     www.y-less.com/YSI/YSI_1.0.zip     | 
+[14:18:12]  |                                        | 
+[14:18:12]  ========================================== 
+[14:18:12]  
+[14:18:33] Incoming connection: 127.0.0.1:65329
+[14:18:33] [join] Jack_Leslie has joined the server (0:127.0.0.1)
+[14:18:44] [part] Jack_Leslie has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[14:19:35] filterscripts = ""  (string)
+[14:19:35] 
+[14:19:35] Server Plugins
+[14:19:35] --------------
+[14:19:35]  Loading plugin: sscanf
+[14:19:35] 
+
+[14:19:35]  ===============================
+
+[14:19:35]       sscanf plugin loaded.     
+
+[14:19:35]          Version:  2.8.1        
+
+[14:19:35]    (c) 2012 Alex "Y_Less" Cole  
+
+[14:19:35]  ===============================
+
+[14:19:35]   Loaded.
+[14:19:35]  Loading plugin: streamer
+[14:19:35] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[14:19:35]   Loaded.
+[14:19:35]  Loaded 2 plugins.
+
+[14:19:35] 
+[14:19:35] Filterscripts
+[14:19:35] ---------------
+[14:19:35]   Loaded 0 filterscripts.
+
+[14:19:35]  
+[14:19:35]  
+[14:19:35]  
+[14:19:35]  ======================================= 
+[14:19:35]  |                                     | 
+[14:19:35]  |        YSI version 3.09.0684        | 
+[14:19:35]  |        By Alex "Y_Less" Cole        | 
+[14:19:35]  |                                     | 
+[14:19:35]  ======================================= 
+[14:19:35]  
+[14:19:35]  
+[14:19:35]  
+[14:19:35]      public LoadHouses has been successfully completed.
+[14:19:35]      public LoadCar has been successfully completed.
+[14:19:35]      public LoadDCars has been successfully completed.
+[14:19:35] **************************
+[14:19:35]    Bone County Roleplay   
+[14:19:35]          Copyright        
+[14:19:35]      Jack Leslie - 2011   
+[14:19:35]       Gamemode Loaded     
+[14:19:35] **************************
+[14:19:35] Number of vehicle models: 6
+[14:19:35]  
+[14:19:35]  ========================================== 
+[14:19:35]  |                                        | 
+[14:19:35]  |  A new version (v<html>
+  ) of YSI is  | 
+[14:19:35]  |            available from:             | 
+[14:19:35]  |                                        | 
+[14:19:35]  |     www.y-less.com/YSI/YSI_1.0.zip     | 
+[14:19:35]  |                                        | 
+[14:19:35]  ========================================== 
+[14:19:35]  
+[14:19:57] Incoming connection: 127.0.0.1:56738
+[14:19:57] [join] Jack_Leslie1 has joined the server (0:127.0.0.1)
+[14:20:09] [part] Jack_Leslie1 has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[16:13:41] filterscripts = ""  (string)
+[16:13:41] 
+[16:13:41] Server Plugins
+[16:13:41] --------------
+[16:13:41]  Loading plugin: sscanf
+[16:13:41] 
+
+[16:13:41]  ===============================
+
+[16:13:41]       sscanf plugin loaded.     
+
+[16:13:41]          Version:  2.8.1        
+
+[16:13:41]    (c) 2012 Alex "Y_Less" Cole  
+
+[16:13:41]  ===============================
+
+[16:13:41]   Loaded.
+[16:13:41]  Loading plugin: streamer
+[16:13:41] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[16:13:41]   Loaded.
+[16:13:41]  Loaded 2 plugins.
+
+[16:13:41] 
+[16:13:41] Filterscripts
+[16:13:41] ---------------
+[16:13:41]   Loaded 0 filterscripts.
+
+[16:13:41]  
+[16:13:41]  
+[16:13:41]  
+[16:13:41]  ======================================= 
+[16:13:41]  |                                     | 
+[16:13:41]  |        YSI version 3.09.0684        | 
+[16:13:41]  |        By Alex "Y_Less" Cole        | 
+[16:13:41]  |                                     | 
+[16:13:41]  ======================================= 
+[16:13:41]  
+[16:13:41]  
+[16:13:41]  
+[16:13:41]      public LoadHouses has been successfully completed.
+[16:13:41]      public LoadCar has been successfully completed.
+[16:13:41]      public LoadDCars has been successfully completed.
+[16:13:41] **************************
+[16:13:41]    Bone County Roleplay   
+[16:13:41]          Copyright        
+[16:13:41]      Jack Leslie - 2011   
+[16:13:41]       Gamemode Loaded     
+[16:13:41] **************************
+[16:13:41] Number of vehicle models: 6
+[16:13:42]  
+[16:13:42]  ========================================== 
+[16:13:42]  |                                        | 
+[16:13:42]  |  A new version (v<html>
+  ) of YSI is  | 
+[16:13:42]  |            available from:             | 
+[16:13:42]  |                                        | 
+[16:13:42]  |     www.y-less.com/YSI/YSI_1.0.zip     | 
+[16:13:42]  |                                        | 
+[16:13:42]  ========================================== 
+[16:13:42]  
+[16:14:23] Incoming connection: 127.0.0.1:53653
+[16:14:24] [join] Jack_Leslie has joined the server (0:127.0.0.1)
+[16:18:25] [part] Jack_Leslie has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[16:18:32] filterscripts = ""  (string)
+[16:18:32] 
+[16:18:32] Server Plugins
+[16:18:32] --------------
+[16:18:32]  Loading plugin: sscanf
+[16:18:32] 
+
+[16:18:32]  ===============================
+
+[16:18:32]       sscanf plugin loaded.     
+
+[16:18:32]          Version:  2.8.1        
+
+[16:18:32]    (c) 2012 Alex "Y_Less" Cole  
+
+[16:18:32]  ===============================
+
+[16:18:32]   Loaded.
+[16:18:32]  Loading plugin: streamer
+[16:18:32] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[16:18:32]   Loaded.
+[16:18:32]  Loaded 2 plugins.
+
+[16:18:32] 
+[16:18:32] Filterscripts
+[16:18:32] ---------------
+[16:18:32]   Loaded 0 filterscripts.
+
+[16:18:33]  
+[16:18:33]  
+[16:18:33]  
+[16:18:33]  ======================================= 
+[16:18:33]  |                                     | 
+[16:18:33]  |        YSI version 3.09.0684        | 
+[16:18:33]  |        By Alex "Y_Less" Cole        | 
+[16:18:33]  |                                     | 
+[16:18:33]  ======================================= 
+[16:18:33]  
+[16:18:33]  
+[16:18:33]  
+[16:18:33]      public LoadHouses has been successfully completed.
+[16:18:33]      public LoadCar has been successfully completed.
+[16:18:33]      public LoadDCars has been successfully completed.
+[16:18:33] **************************
+[16:18:33]    Bone County Roleplay   
+[16:18:33]          Copyright        
+[16:18:33]      Jack Leslie - 2011   
+[16:18:33]       Gamemode Loaded     
+[16:18:33] **************************
+[16:18:33] Number of vehicle models: 6
+[16:18:53] Incoming connection: 127.0.0.1:60991
+[16:18:53] [join] Jack_Leslie has joined the server (0:127.0.0.1)
+[16:20:13] [death] Jack_Leslie died 54
+[16:20:29] [death] Jack_Leslie died 54
+[16:22:29] [part] Jack_Leslie has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[19:21:47] filterscripts = ""  (string)
+[19:21:47] 
+[19:21:47] Server Plugins
+[19:21:47] --------------
+[19:21:47]  Loading plugin: sscanf
+[19:21:47]   Failed.
+[19:21:47]  Loading plugin: streamer
+[19:21:47] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[19:21:47]   Loaded.
+[19:21:47]  Loaded 1 plugins.
+
+[19:21:48] 
+[19:21:48] Filterscripts
+[19:21:48] ---------------
+[19:21:48]   Loaded 0 filterscripts.
+
+[19:21:48] Script[gamemodes/bc.amx]: Run time error 19: "File or function is not found"
+[19:21:48] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[19:31:45] filterscripts = ""  (string)
+[19:31:45] 
+[19:31:45] Server Plugins
+[19:31:45] --------------
+[19:31:45]  Loading plugin: sscanf
+[19:31:45] 
+
+[19:31:45]  ===============================
+
+[19:31:45]       sscanf plugin loaded.     
+
+[19:31:45]          Version:  2.8.1        
+
+[19:31:45]    (c) 2012 Alex "Y_Less" Cole  
+
+[19:31:45]  ===============================
+
+[19:31:45]   Loaded.
+[19:31:45]  Loading plugin: streamer
+[19:31:45] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[19:31:45]   Loaded.
+[19:31:45]  Loaded 2 plugins.
+
+[19:31:45] 
+[19:31:45] Filterscripts
+[19:31:45] ---------------
+[19:31:45]   Loaded 0 filterscripts.
+
+[19:31:45]  
+[19:31:45]  
+[19:31:45]  
+[19:31:45]  ======================================= 
+[19:31:45]  |                                     | 
+[19:31:45]  |        YSI version 3.09.0684        | 
+[19:31:45]  |        By Alex "Y_Less" Cole        | 
+[19:31:45]  |                                     | 
+[19:31:45]  ======================================= 
+[19:31:45]  
+[19:31:45]  
+[19:31:45]  
+[19:31:45]      public LoadHouses has been successfully completed.
+[19:31:45]      public LoadCar has been successfully completed.
+[19:31:45]      public LoadDCars has been successfully completed.
+[19:31:45] **************************
+[19:31:45]    Bone County Roleplay   
+[19:31:45]          Copyright        
+[19:31:45]      Jack Leslie - 2011   
+[19:31:45]       Gamemode Loaded     
+[19:31:45] **************************
+[19:31:45] Number of vehicle models: 6
