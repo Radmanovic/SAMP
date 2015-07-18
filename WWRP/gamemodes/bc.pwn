@@ -591,7 +591,8 @@ enum pInfo
 	Helper,
 	Developer,
 	RentingID,
-	FRank
+	FRank,
+  Premium
 }
 new PlayerInfo[MAX_PLAYERS][pInfo];
 //============================================================================//
@@ -1180,6 +1181,7 @@ public LoadUser_data(playerid,name[],value[])
 	INI_Int("Helper", PlayerInfo[playerid][Helper]);
 	INI_Int("Developer", PlayerInfo[playerid][Developer]);
 	INI_Int("RentingID", PlayerInfo[playerid][RentingID]);
+  INI_Int("Premium", PlayerInfo[playerid][Premium]);
     return 1;
 }
 
@@ -1447,7 +1449,8 @@ public SavePlayer(playerid)
 	INI_WriteInt(File, "Helper", PlayerInfo[playerid][Helper]);
 	INI_WriteInt(File, "Developer", PlayerInfo[playerid][Developer]);
 	INI_WriteInt(File, "RentingID", PlayerInfo[playerid][RentingID]);
-	INI_Close(File);
+	INI_WriteInt(File, "Premium", PlayerInfo[playerid][Premium]);
+  INI_Close(File);
 	gPlayerLoggedIn[playerid] = 0;
 	return 1;
 }
@@ -2803,7 +2806,7 @@ YCMD:setvw(playerid, params[])
 	return 1;
 }
 
-YCMD:ask(playerid, params[])
+YCMD:pitaj(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
@@ -3078,7 +3081,26 @@ YCMD:spec(playerid, params[])
 
 	return 1;
 }
+//--Premium Commands
+YCMD:makepremium(playerid, params[])
+{
+	if(PlayerInfo[playerid][Admin] < 5) return 1;
 
+	new player, level, string[126];
+	if(sscanf(params, "ud", player, level)) return SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /makepremium [Deo Imena/Player ID] [0-1]");
+
+	if(!IsPlayerConnected(playerid)) return SendClientMessage(playerid, COLOR_GREY, "Igrac nije konektovan.");
+
+	if(level < 0 || level > 1) SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /makepremium [Deo Imena/Player ID] [0-1]");
+
+	PlayerInfo[player][Premium] = level;
+	format(string, sizeof(string), "Admin %s vas je postavio za Premium Level %d.", PlayerName(playerid), level);
+	SendClientMessage(player, COLOR_YELLOW, string);
+	format(string, sizeof(string), "AdmWarning: %s je postao level %d Premium | Premium dat od strane  %s", PlayerName(player), level, PlayerName(playerid));
+	AMessage(COLOR_LIGHTRED, string);
+
+	return 1;
+}
 // [End of YCMD] //
 public OnGameModeInit()
 {
@@ -3482,6 +3504,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			    INI_WriteInt(File, "Helper", 0);
 			    INI_WriteInt(File, "Developer", 0);
 			    INI_WriteInt(File, "RentingID", 0);
+          INI_WriteInt(File, "Premium", 0);
                 INI_Close(File);
                 INI_ParseFile(UserPath(playerid), "LoadUser_%s", .bExtra = true, .extra = playerid);
 				ResetPlayerMoney(playerid);

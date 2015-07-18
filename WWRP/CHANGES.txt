@@ -3,3 +3,5 @@ SA-MP Wild West Roleplay
 
 v0.0.1
 ------
+Dodat Premium System za sada samo sa jednim levelom
+Dodata komanda /makepremium
