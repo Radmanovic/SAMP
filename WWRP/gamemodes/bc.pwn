@@ -4,8 +4,7 @@
 ********** Wild West Rolepaly ***************
 ***********************************************
 
-Original credits to Jack Leslie.
-Edit by: Nikola Radmanovic
+By Radmanovic
 */
 // [PRAGMAS] //
 #pragma unused TaxiJob

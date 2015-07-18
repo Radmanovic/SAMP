@@ -1471,3 +1471,70 @@ v0.3z, (C)2005-2014 SA-MP Team
 [19:31:45]       Gamemode Loaded     
 [19:31:45] **************************
 [19:31:45] Number of vehicle models: 6
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7, (C)2005-2015 SA-MP Team
+
+[12:49:46] filterscripts = ""  (string)
+[12:49:46] 
+[12:49:46] Server Plugins
+[12:49:46] --------------
+[12:49:46]  Loading plugin: sscanf
+[12:49:46] 
+
+[12:49:46]  ===============================
+
+[12:49:46]       sscanf plugin loaded.     
+
+[12:49:46]          Version:  2.8.1        
+
+[12:49:46]    (c) 2012 Alex "Y_Less" Cole  
+
+[12:49:46]  ===============================
+
+[12:49:46]   Loaded.
+[12:49:46]  Loading plugin: streamer
+[12:49:46] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[12:49:46]   Loaded.
+[12:49:46]  Loaded 2 plugins.
+
+[12:49:46] 
+[12:49:46] Filterscripts
+[12:49:46] ---------------
+[12:49:46]   Loaded 0 filterscripts.
+
+[12:49:47]  
+[12:49:47]  
+[12:49:47]  
+[12:49:47]  ======================================= 
+[12:49:47]  |                                     | 
+[12:49:47]  |        YSI version 3.09.0684        | 
+[12:49:47]  |        By Alex "Y_Less" Cole        | 
+[12:49:47]  |                                     | 
+[12:49:47]  ======================================= 
+[12:49:47]  
+[12:49:47]  
+[12:49:47]  
+[12:49:47]      public Kuce su ucitane.
+[12:49:47]      public Vozila su ucitana.
+[12:49:47]      public DVozila su ucitana.
+[12:49:47] **************************
+[12:49:47]    	Wild West Roleplay   
+[12:49:47]          Copyright        
+[12:49:47]   Nikola Radmanovic - 2011   
+[12:49:47]       Gamemode Ucitan     
+[12:49:47] **************************
+[12:49:47] Number of vehicle models: 6
+[12:51:30] [connection] 127.0.0.1:63243 requests connection cookie.
+[12:51:31] Incoming connection: 127.0.0.1:63243 id: 0
+[12:51:31] [join] Nikola_Radmanovic has joined the server (0:127.0.0.1)
+[12:53:39] RCON (In-Game): Player #0 (Nikola_Radmanovic) failed login.
+[12:53:41] [part] Nikola_Radmanovic has left the server (0:1)
