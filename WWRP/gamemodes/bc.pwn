@@ -2,10 +2,13 @@
 ***********************************************
 ********** Wild West Rolepaly ***************
 ***********************************************
+[Project is on Github]
+
 By Radmanovic
 */
 // [PRAGMAS] //
 #pragma unused TaxiJob
+#pragma tabsize 0
 // [Main Includes] //
 #include <a_samp>
 #include <sscanf2>
@@ -94,7 +97,7 @@ forward RestartGamemode();
 forward SavePlayer(playerid);
 forward UnfreezeBastard(playerid);
 forward ClearScreen(playerid);
-forward AMessage(color, const string[]);
+forward APoruka(color, const string[]);
 forward HelperMessage(color, const string[]);
 forward DeveloperMessage(color, const string[]);
 forward split(const strsrc[], strdest[][], delimiter);
@@ -549,11 +552,11 @@ new DCarInfo[200][vdInfo];
 
 enum pInfo
 {
-	Password,
-	Admin,
-	Origin,
-	Gender,
-	Age,
+	pLozinka,
+	pAdmin,
+	pDrzava,
+	pPol,
+	pGodine,
 	Float:sPosX,
 	Float:sPosY,
 	Float:sPosZ,
@@ -580,19 +583,19 @@ enum pInfo
 	Gun12,
 	Gun13,
 	WTChannel,
-	Faction,
-	FLeader,
+	pOrg,
+	pLider,
 	Job[64],
 	sInterior,
 	sVW,
 	Skin,
 	Muted,
-	nMute,
-	Helper,
-	Developer,
+	pMute,
+	pHelper,
+	pDeveloper,
 	RentingID,
-	FRank,
-  Premium
+	pRank,
+  	pPremium
 }
 new PlayerInfo[MAX_PLAYERS][pInfo];
 //============================================================================//
@@ -827,10 +830,10 @@ stock IsPlayerDriver(playerid) //By Sacky
 	return 0;
 }
 
-stock GetFactionName(factionid)
+stock GetFactionName(orgid)
 {
     new string[126];
-    switch(factionid)
+    switch(orgid)
     {
         case 13: string = "Bone County News";
         case 12: string = "Bone County Government";
@@ -854,7 +857,7 @@ stock GetFactionName(factionid)
 stock GetPlayerOrigin(playerid)
 {
     new string[126];
-    switch(PlayerInfo[playerid][Origin])
+    switch(PlayerInfo[playerid][pDrzava])
     {
         case 5: string = "Makedonija";
         case 4: string = "Crna Gora";
@@ -1139,11 +1142,11 @@ public SaveHouses()
 forward LoadUser_data(playerid,name[],value[]);
 public LoadUser_data(playerid,name[],value[])
 {
-    INI_Int("Lozinka", PlayerInfo[playerid][Password]);
-    INI_Int("Admin", PlayerInfo[playerid][Admin]);
-    INI_Int("Drzava", PlayerInfo[playerid][Origin]);
-    INI_Int("Pol", PlayerInfo[playerid][Gender]);
-    INI_Int("Godina", PlayerInfo[playerid][Age]);
+    INI_Int("Lozinka", PlayerInfo[playerid][pLozinka]);
+    INI_Int("Admin", PlayerInfo[playerid][pAdmin]);
+    INI_Int("Drzava", PlayerInfo[playerid][pDrzava]);
+    INI_Int("Pol", PlayerInfo[playerid][pPol]);
+    INI_Int("Godina", PlayerInfo[playerid][pGodine]);
     INI_Float("sPosX", PlayerInfo[playerid][sPosX]);
     INI_Float("sPosY", PlayerInfo[playerid][sPosY]);
     INI_Float("sPosZ", PlayerInfo[playerid][sPosZ]);
@@ -1170,18 +1173,18 @@ public LoadUser_data(playerid,name[],value[])
     INI_Int("Gun12", PlayerInfo[playerid][Gun12]);
     INI_Int("Gun13", PlayerInfo[playerid][Gun13]);
     INI_Int("WTChannel", PlayerInfo[playerid][WTChannel]);
-    INI_Int("Organizacija", PlayerInfo[playerid][Faction]);
-	INI_Int("Lider", PlayerInfo[playerid][FLeader]);
-	INI_String("Posao", PlayerInfo[playerid][Job], 64);
-	INI_Int("sInterior", PlayerInfo[playerid][sInterior]);
-	INI_Int("sVW", PlayerInfo[playerid][sVW]);
-	INI_Int("Skin", PlayerInfo[playerid][Skin]);
-	INI_Int("Muted", PlayerInfo[playerid][Muted]);
-	INI_Int("nMute", PlayerInfo[playerid][nMute]);
-	INI_Int("Helper", PlayerInfo[playerid][Helper]);
-	INI_Int("Developer", PlayerInfo[playerid][Developer]);
-	INI_Int("RentingID", PlayerInfo[playerid][RentingID]);
-  INI_Int("Premium", PlayerInfo[playerid][Premium]);
+    INI_Int("Organizacija", PlayerInfo[playerid][pOrg]);
+	INI_Int("Lider", PlayerInfo[playerid][pLider]);
+ 	INI_String("Posao", PlayerInfo[playerid][Job], 64);
+  	INI_Int("sInterior", PlayerInfo[playerid][sInterior]);
+  	INI_Int("sVW", PlayerInfo[playerid][sVW]);
+  	INI_Int("Skin", PlayerInfo[playerid][Skin]);
+  	INI_Int("Muted", PlayerInfo[playerid][Muted]);
+  	INI_Int("pMute", PlayerInfo[playerid][pMute]);
+  	INI_Int("Helper", PlayerInfo[playerid][pHelper]);
+  	INI_Int("Developer", PlayerInfo[playerid][pDeveloper]);
+  	INI_Int("RentingID", PlayerInfo[playerid][RentingID]);
+  	INI_Int("Premium", PlayerInfo[playerid][pPremium]);
     return 1;
 }
 
@@ -1363,7 +1366,7 @@ public DeveloperMessage(color, const string[])
 {
 	foreach(Player, i)
 	{
-	    if(PlayerInfo[i][Developer] >= 1)
+	    if(PlayerInfo[i][pDeveloper] >= 1)
 	    {
 	        SendClientMessage(i, color, string);
 	        return 1;
@@ -1376,7 +1379,7 @@ public HelperMessage(color, const string[])
 {
 	foreach(Player, i)
 	{
-	    if(PlayerInfo[i][Helper] >=1)
+	    if(PlayerInfo[i][pHelper] >=1)
 	    {
 	        SendClientMessage(i, color, string);
 	        return 1;
@@ -1385,11 +1388,11 @@ public HelperMessage(color, const string[])
 	return 1;
 }
 
-public AMessage(color, const string[])
+public APoruka(color, const string[])
 {
 	foreach(Player, i)
 	{
-	    if(PlayerInfo[i][Admin] >=1)
+	    if(PlayerInfo[i][pAdmin] >=1)
 	    {
 	        SendClientMessage(i, color, string);
 	        return 1;
@@ -1407,11 +1410,11 @@ public SavePlayer(playerid)
 	GetPlayerFacingAngle(playerid, sA);
 	GetPlayerHealth(playerid, sH);
 	GetPlayerArmour(playerid, sAr);
-	INI_WriteInt(File, "Lozinka", PlayerInfo[playerid][Password]);
-	INI_WriteInt(File, "Admin", PlayerInfo[playerid][Admin]);
-	INI_WriteInt(File, "Drzava", PlayerInfo[playerid][Origin]);
-	INI_WriteInt(File, "Pol", PlayerInfo[playerid][Gender]);
-	INI_WriteInt(File, "Godina", PlayerInfo[playerid][Age]);
+	INI_WriteInt(File, "Lozinka", PlayerInfo[playerid][pLozinka]);
+	INI_WriteInt(File, "Admin", PlayerInfo[playerid][pAdmin]);
+	INI_WriteInt(File, "Drzava", PlayerInfo[playerid][pDrzava]);
+	INI_WriteInt(File, "Pol", PlayerInfo[playerid][pPol]);
+	INI_WriteInt(File, "Godina", PlayerInfo[playerid][pGodine]);
 	INI_WriteFloat(File, "sPosX", sX);
 	INI_WriteFloat(File, "sPosY", sY);
 	INI_WriteFloat(File, "sPosZ", sZ);
@@ -1438,19 +1441,19 @@ public SavePlayer(playerid)
 	INI_WriteInt(File, "Gun12", 0);
 	INI_WriteInt(File, "Gun13", 0);
 	INI_WriteInt(File, "WTChannel", PlayerInfo[playerid][WTChannel]);
-	INI_WriteInt(File, "Organizacija", PlayerInfo[playerid][Faction]);
-	INI_WriteInt(File, "Lider", PlayerInfo[playerid][FLeader]);
+	INI_WriteInt(File, "Organizacija", PlayerInfo[playerid][pOrg]);
+	INI_WriteInt(File, "Lider", PlayerInfo[playerid][pLider]);
 	INI_WriteString(File, "Posao", PlayerInfo[playerid][Job]);
 	INI_WriteInt(File, "sInterior", GetPlayerInterior(playerid));
 	INI_WriteInt(File, "sVW", GetPlayerVirtualWorld(playerid));
 	INI_WriteInt(File, "Skin", PlayerInfo[playerid][Skin]);
 	INI_WriteInt(File, "Muted", PlayerInfo[playerid][Muted]);
-	INI_WriteInt(File, "nMute", PlayerInfo[playerid][nMute]);
-	INI_WriteInt(File, "Helper", PlayerInfo[playerid][Helper]);
-	INI_WriteInt(File, "Developer", PlayerInfo[playerid][Developer]);
+	INI_WriteInt(File, "pMute", PlayerInfo[playerid][pMute]);
+	INI_WriteInt(File, "Helper", PlayerInfo[playerid][pHelper]);
+	INI_WriteInt(File, "Developer", PlayerInfo[playerid][pDeveloper]);
 	INI_WriteInt(File, "RentingID", PlayerInfo[playerid][RentingID]);
-	INI_WriteInt(File, "Premium", PlayerInfo[playerid][Premium]);
-  INI_Close(File);
+	INI_WriteInt(File, "Premium", PlayerInfo[playerid][pPremium]);
+  	INI_Close(File);
 	gPlayerLoggedIn[playerid] = 0;
 	return 1;
 }
@@ -1609,10 +1612,10 @@ YCMD:makeleader(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-    if(PlayerInfo[playerid][Admin] < 5) return 1;
+    if(PlayerInfo[playerid][pAdmin] < 5) return 1;
 
-	new target, factionid, string[126];
-	if(sscanf(params, "ud", target, factionid))
+	new target, orgid, string[126];
+	if(sscanf(params, "ud", target, orgid))
 	{
 		SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /makeleader [Deo Imena/ID] [Organizacija ID]");
 		SendClientMessage(playerid, COLOR_GREY,"Faction IDs: 1 - Fort Carson Sheriff Department");
@@ -1625,30 +1628,30 @@ YCMD:makeleader(playerid, params[])
 		return 1;
 	}
 
-	if(factionid < 0 || factionid > 13) return SendClientMessage(playerid, COLOR_GREY, "Organizacije idu od 0 do 13.");
+	if(orgid < 0 || orgid > 13) return SendClientMessage(playerid, COLOR_GREY, "Organizacije idu od 0 do 13.");
 
 	if(!IsPlayerConnected(target)) return SendClientMessage(playerid, COLOR_GREY ,"Igrac nije povezan.");
 
-	if(factionid == PlayerInfo[target][FLeader]) return SendClientMessage(playerid, COLOR_GREY, "Taj igrac je vec lider neke organizacije.");
+	if(orgid == PlayerInfo[target][pLider]) return SendClientMessage(playerid, COLOR_GREY, "Taj igrac je vec lider neke organizacije.");
 
-	if(factionid == 0)
+	if(orgid == 0)
 	{
-	    PlayerInfo[target][Faction] = 0;
-	    PlayerInfo[target][FLeader] = 0;
+	    PlayerInfo[target][pOrg] = 0;
+	    PlayerInfo[target][pLider] = 0;
 	    SendClientMessage(target, COLOR_LIGHTRED, "Administrator vam je povukao liderska prava.");
 		format(string, sizeof(string), "AdmWarning:{FFFFFF} Oduzeli ste %s liderska prava.", PlayerName(target));
 		SendClientMessage(playerid, COLOR_LIGHTRED, string);
 		return 1;
 	}
 
-	PlayerInfo[target][Faction] = factionid;
- 	PlayerInfo[target][FLeader] = factionid;
+	PlayerInfo[target][pOrg] = orgid;
+ 	PlayerInfo[target][pLider] = orgid;
 
-	format(string, sizeof(string), "Admin %s vas je postavio za lidera %s!", PlayerName(playerid), GetFactionName(factionid));
+	format(string, sizeof(string), "Admin %s vas je postavio za lidera %s!", PlayerName(playerid), GetFactionName(orgid));
 	SendClientMessage(target, COLOR_LIGHTBLUE, string);
 
-	format(string, sizeof(string), "AdmWarning:{FFFFFF} %s je dao %s lidera %s.", PlayerName(playerid), PlayerName(target), GetFactionName(factionid));
-	AMessage(COLOR_LIGHTRED, string);
+	format(string, sizeof(string), "AdmWarning:{FFFFFF} %s je dao %s lidera %s.", PlayerName(playerid), PlayerName(target), GetFactionName(orgid));
+	APoruka(COLOR_LIGHTRED, string);
 
 	return 1;
 }
@@ -1684,7 +1687,7 @@ YCMD:givemoney(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-    if(PlayerInfo[playerid][Admin] < 4) return 1;
+    if(PlayerInfo[playerid][pAdmin] < 4) return 1;
 
     new target, money;
 
@@ -1695,7 +1698,7 @@ YCMD:givemoney(playerid, params[])
 	GivePlayerMoney(target, money);
 
 	format(string, sizeof(string), "AdmWarning: %s je dao %s $%d.", PlayerName(playerid), PlayerName(target), money);
-	AMessage(COLOR_LIGHTRED, string);
+	APoruka(COLOR_LIGHTRED, string);
 	format(string, sizeof(string), "AdmWarning: %s je dao $%d.", PlayerName(playerid), money);
 	SendClientMessage(target, COLOR_GREY, string);
 
@@ -1948,7 +1951,7 @@ YCMD:edithouse(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-	if(PlayerInfo[playerid][Admin] < 5) return 1;
+	if(PlayerInfo[playerid][pAdmin] < 5) return 1;
 
 	new id, what[128], amount;
 	new string[128];
@@ -2002,7 +2005,7 @@ YCMD:createhouse(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-	if(PlayerInfo[playerid][Admin] < 5) return 1;
+	if(PlayerInfo[playerid][pAdmin] < 5) return 1;
 
 	new price, level, id, int, world, string[128];
 
@@ -2056,7 +2059,7 @@ YCMD:createhouse(playerid, params[])
  	HouseInfo[id][hInsideIcon] = CreateDynamicPickup(1273, 1, HouseInfo[id][hExitX], HouseInfo[id][hExitY], HouseInfo[id][hExitZ], HouseInfo[id][hInsideWorld]);
 
 	format(string, sizeof(string), "AdmWarning: %s je napravio kucu id: %d cena: $%d level: %d.", PlayerName(playerid), id, price, level);
-	AMessage(COLOR_LIGHTRED, string);
+	APoruka(COLOR_LIGHTRED, string);
 	return 1;
 }
 
@@ -2064,7 +2067,7 @@ YCMD:deletehouse(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-	if(PlayerInfo[playerid][Admin] < 5) return 1;
+	if(PlayerInfo[playerid][pAdmin] < 5) return 1;
 
 	new id;
 
@@ -2097,7 +2100,7 @@ YCMD:deletehouse(playerid, params[])
 	new string[128];
 
 	format(string, sizeof(string), "AdmWarning: %s je obrisao kucu %d.", PlayerName(playerid), id);
-	AMessage(COLOR_LIGHTRED, string);
+	APoruka(COLOR_LIGHTRED, string);
 
 	return 1;
 }
@@ -2106,7 +2109,7 @@ YCMD:gotokuca(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-    if(PlayerInfo[playerid][Admin] < 3) return 1;
+    if(PlayerInfo[playerid][pAdmin] < 3) return 1;
 
     new id;
 	if(sscanf(params, "d", id)) return SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /gotokuca [kuca id]");
@@ -2136,11 +2139,11 @@ YCMD:hc(playerid, params[])
 
 	new string[128], level[128];
 
-	if(PlayerInfo[playerid][Helper] == 0) return 1;
+	if(PlayerInfo[playerid][pHelper] == 0) return 1;
 
 	if(isnull(params)) return SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /hc [tekst]");
 
-	switch(PlayerInfo[playerid][Helper])
+	switch(PlayerInfo[playerid][pHelper])
 	{
 		case 1: level = "General Helper";
 		case 2: level = "Senior Helper";
@@ -2158,11 +2161,11 @@ YCMD:a(playerid, params[])
 
 	new string[128], level[128];
 
-	if(PlayerInfo[playerid][Admin] == 0) return 1;
+	if(PlayerInfo[playerid][pAdmin] == 0) return 1;
 
 	if(isnull(params)) return SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /a [tekst]");
 
-	switch(PlayerInfo[playerid][Admin])
+	switch(PlayerInfo[playerid][pAdmin])
 	{
 	    case 1: level = "Secret Admin";
 		case 2: level = "Junior Admin";
@@ -2171,7 +2174,7 @@ YCMD:a(playerid, params[])
 		case 5: level = "Community Owner";
 	}
 	format(string, sizeof(string), "** %s %s kaze: %s", level, PlayerName(playerid), params);
-	AMessage(COLOR_LIGHTORANGE, string);
+	APoruka(COLOR_LIGHTORANGE, string);
 	return 1;
 }
 
@@ -2181,11 +2184,11 @@ YCMD:dc(playerid, params[])
 
 	new string[128], level[128];
 
-	if(PlayerInfo[playerid][Developer] == 0) return 1;
+	if(PlayerInfo[playerid][pDeveloper] == 0) return 1;
 
 	if(isnull(params)) return SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /dc [Koristi]");
 
-	switch(PlayerInfo[playerid][Developer])
+	switch(PlayerInfo[playerid][pDeveloper])
  	{
       case 1: level = "Developer";
       case 2: level = "Senior Developer";
@@ -2205,7 +2208,7 @@ YCMD:o(playerid, params[])
 
 	format(string, sizeof(string), "(( [OOC] %s kaze: %s ))", PlayerName(playerid), params);
 
-	if(noooc == 0 && PlayerInfo[playerid][Admin] < 3) return SendClientMessage(playerid, COLOR_GREY, "OOC chat je {#f40000}onemogucen.");
+	if(noooc == 0 && PlayerInfo[playerid][pAdmin] < 3) return SendClientMessage(playerid, COLOR_GREY, "OOC chat je {#f40000}onemogucen.");
 	SendClientMessageToAll(COLOR_WHITE, string);
 
 	return 1;
@@ -2416,7 +2419,7 @@ YCMD:saveveh(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-    if(PlayerInfo[playerid][Admin] < 4) return 1;
+    if(PlayerInfo[playerid][pAdmin] < 4) return 1;
 
 	if(!isnull(params)) {
 
@@ -2446,7 +2449,7 @@ YCMD:saveonfoot(playerid, params[])
 {
 	if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-    if(PlayerInfo[playerid][Admin] < 3) {
+    if(PlayerInfo[playerid][pAdmin] < 3) {
 	    SendClientMessage(playerid, COLOR_LIGHTRED, "Koristi:{FFFFFF} Samo Admin.");
 	    return 1;
 	}
@@ -2471,7 +2474,7 @@ YCMD:gotoint(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-	if(PlayerInfo[playerid][Admin] < 3) {
+	if(PlayerInfo[playerid][pAdmin] < 3) {
 	    SendClientMessage(playerid, COLOR_LIGHTRED, "Samo Admin.");
 	    return 1;
 	}
@@ -2489,7 +2492,7 @@ YCMD:sethp(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-	if(PlayerInfo[playerid][Admin] < 3) {
+	if(PlayerInfo[playerid][pAdmin] < 3) {
 	    SendClientMessage(playerid, COLOR_LIGHTRED, "Samo Admin.");
 	    return 1;
 	}
@@ -2503,7 +2506,7 @@ YCMD:sethp(playerid, params[])
 	format(string, sizeof(string), "Warning: Admin %s vam je podesio HP na %d.", PlayerName(playerid), hp);
 	SendClientMessage(target, COLOR_LIGHTRED, string);
 	format(string, sizeof(string), "AdmWarning: %s je podesio HP igracu %s na %d.", PlayerName(playerid), PlayerName(target), hp);
-	AMessage(COLOR_LIGHTRED, string);
+	APoruka(COLOR_LIGHTRED, string);
 	return 1;
 }
 
@@ -2511,7 +2514,7 @@ YCMD:setarmour(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-	if(PlayerInfo[playerid][Admin] < 3) {
+	if(PlayerInfo[playerid][pAdmin] < 3) {
 	    SendClientMessage(playerid, COLOR_LIGHTRED, "Samo Admin.");
 	    return 1;
 	}
@@ -2525,13 +2528,13 @@ YCMD:setarmour(playerid, params[])
 	format(string, sizeof(string), "Warning: Admin %s vam je podesio Pancir na  %d.", PlayerName(playerid), armour);
 	SendClientMessage(target, COLOR_LIGHTRED, string);
  	format(string, sizeof(string), "AdmWarning: %s je podesio igracu %s Pancir na %d.", PlayerName(playerid), PlayerName(target), armour);
- 	AMessage(COLOR_LIGHTRED, string);
+ 	APoruka(COLOR_LIGHTRED, string);
 	return 1;
 }
 
 YCMD:goto(playerid, params[])
 {
-	if(PlayerInfo[playerid][Admin] < 2) return 1;
+	if(PlayerInfo[playerid][pAdmin] < 2) return 1;
 
 	new player;
 
@@ -2604,7 +2607,7 @@ YCMD:goto(playerid, params[])
 
 YCMD:makeadmin(playerid, params[])
 {
-	if(PlayerInfo[playerid][Admin] < 5) return 1;
+	if(PlayerInfo[playerid][pAdmin] < 5) return 1;
 
 	new player, level, string[126];
 	if(sscanf(params, "ud", player, level)) return SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /makeadmin [Deo Imena/Player ID] [0-5]");
@@ -2613,11 +2616,11 @@ YCMD:makeadmin(playerid, params[])
 
 	if(level < 0 || level > 5) SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /makeadmin [Deo Imena/Player ID] [0-5]");
 
-	PlayerInfo[player][Admin] = level;
+	PlayerInfo[player][pAdmin] = level;
 	format(string, sizeof(string), "Admin %s vas je postavio za Level %d Administratora.", PlayerName(playerid), level);
 	SendClientMessage(player, COLOR_YELLOW, string);
 	format(string, sizeof(string), "AdmWarning: %s je postao level %d Administrator | Postavljen na funkciju od strane  %s", PlayerName(player), level, PlayerName(playerid));
-	AMessage(COLOR_LIGHTRED, string);
+	APoruka(COLOR_LIGHTRED, string);
 
 	return 1;
 }
@@ -2626,25 +2629,25 @@ YCMD:pmute(playerid, params[])
 {
 	if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-	if(PlayerInfo[playerid][Admin] >= 1 || PlayerInfo[playerid][Helper] >= 1) {
+	if(PlayerInfo[playerid][pAdmin] >= 1 || PlayerInfo[playerid][pHelper] >= 1) {
 	    new player, string[128];
-	    if(sscanf(params, "u", player)) return SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /nmute [Deo Imena/Player ID]");
+	    if(sscanf(params, "u", player)) return SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /pMute [Deo Imena/Player ID]");
 
-		if(PlayerInfo[player][nMute] == 0)
+		if(PlayerInfo[player][pMute] == 0)
 		{
-		    PlayerInfo[player][nMute] = 1;
+		    PlayerInfo[player][pMute] = 1;
 		    SendClientMessage(player, COLOR_LIGHTRED, "Imate zabranu pristupu komandi /pitaj.");
 			format(string, sizeof(string), "AdmWarning: %s je postavio zabranu igracu %s na komandu /pitaj.", PlayerName(player), PlayerName(playerid));
-			AMessage(COLOR_LIGHTRED, string);
+			APoruka(COLOR_LIGHTRED, string);
 			HelperMessage(COLOR_LIGHTRED, string);
 			return 1;
 		}
-		if(PlayerInfo[player][nMute] == 1)
+		if(PlayerInfo[player][pMute] == 1)
 		{
-			PlayerInfo[player][nMute] = 0;
+			PlayerInfo[player][pMute] = 0;
 		    SendClientMessage(player, COLOR_LIGHTRED, "Vracen vam je pristup komandi /pitaj.");
 			format(string, sizeof(string), "AdmWarning: %s je odobrio igracu %s pristup komandi /pitaj.", PlayerName(player), PlayerName(playerid));
-			AMessage(COLOR_LIGHTRED, string);
+			APoruka(COLOR_LIGHTRED, string);
 			HelperMessage(COLOR_LIGHTRED, string);
 			return 1;
 
@@ -2658,7 +2661,7 @@ YCMD:destroyveh(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-    if(PlayerInfo[playerid][Admin] < 4) return 1;
+    if(PlayerInfo[playerid][pAdmin] < 4) return 1;
 
 	new currentVehicle = GetPlayerVehicleID(playerid);
 	new check;
@@ -2683,7 +2686,7 @@ YCMD:veh(playerid, params[])
 {
 	if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-	if(PlayerInfo[playerid][Admin] >= 4) {
+	if(PlayerInfo[playerid][pAdmin] >= 4) {
 	new model[128], color1, color2;
 	if(sscanf( params, "s[128]dd", model, color1, color2)) return SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /veh [Ime vozila] [Boja1] [Boja2]");
 
@@ -2720,7 +2723,7 @@ YCMD:setskin(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-    if(PlayerInfo[playerid][Admin] >= 2 ) {
+    if(PlayerInfo[playerid][pAdmin] >= 2 ) {
 		new skin, player;
 		if(sscanf(params, "ud", player, skin)) return SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /setskin [Deo Imena/ID] [SkinID]");
 
@@ -2731,7 +2734,7 @@ YCMD:setskin(playerid, params[])
 		PlayerInfo[player][Skin] = skin;
 		new string[126];
 		format(string, sizeof(string), "AdmWarning: %s je podesio igracu %s skin na %d.", PlayerName(playerid), PlayerName(player), skin);
-		AMessage(COLOR_LIGHTRED, string);
+		APoruka(COLOR_LIGHTRED, string);
 		return 1;
 	}
 	return 1;
@@ -2741,7 +2744,7 @@ YCMD:kick(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-	if(PlayerInfo[playerid][Admin] >= 1) {
+	if(PlayerInfo[playerid][pAdmin] >= 1) {
 		new player, reason[126];
 
 		if(sscanf(params, "us[126]", player, reason)) return SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /kick [Deo Imena/Player ID] [Razlog]");
@@ -2749,7 +2752,7 @@ YCMD:kick(playerid, params[])
 		if(!IsPlayerConnected(player)) return SendClientMessage(playerid, COLOR_GREY, "Igrac nije konektovan.");
 		new string[126];
 
-		if(PlayerInfo[playerid][Admin] < PlayerInfo[player][Admin]) {
+		if(PlayerInfo[playerid][pAdmin] < PlayerInfo[player][pAdmin]) {
 			format(string, sizeof(string), "AdmWarning: %s je izbacen sa servera jer je pokusao da izbaci admina sa vecim level-om!", PlayerName(playerid));
 			SendClientMessageToAll(COLOR_LIGHTRED, string);
 		}
@@ -2757,7 +2760,7 @@ YCMD:kick(playerid, params[])
 		format(string, sizeof(string), "AdmWarning: %s je izbacio sa servera %s, razlog: %s", PlayerName(player), PlayerName(playerid), reason);
 		SendClientMessageToAll(COLOR_LIGHTRED, string);
 		Kick(player);
-
+    AdminLog(string, playerid);
 	}
 	return 1;
 }
@@ -2766,7 +2769,7 @@ YCMD:gethere(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-	if(PlayerInfo[playerid][Admin] < 2) return 1;
+	if(PlayerInfo[playerid][pAdmin] < 2) return 1;
 
 	new player;
 
@@ -2787,7 +2790,7 @@ YCMD:setvw(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-	if(PlayerInfo[playerid][Admin] >= 1) {
+	if(PlayerInfo[playerid][pAdmin] >= 1) {
 		new player, vw, string[126];
 		if(sscanf(params, "ud", player, vw)) return SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /setvw [Deo Imena/Player ID] [VW]");
 
@@ -2801,7 +2804,7 @@ YCMD:setvw(playerid, params[])
 		format(string, sizeof(string), "Podesili ste igracev %s VW na %d!", PlayerName(player), vw);
 		SendClientMessage(playerid, COLOR_LIGHTRED, string);
 		format(string, sizeof(string), "/setint ");
-		//AdminLog(string, playerid);
+		AdminLog(string, playerid);
 	}
 	return 1;
 }
@@ -2810,13 +2813,13 @@ YCMD:pitaj(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-	if(PlayerInfo[playerid][Helper] == 0) {
+	if(PlayerInfo[playerid][pHelper] == 0) {
 	    new question[128];
 	    if(sscanf(params, "s[128]", question)) return SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /pitaj [Pitanje]");
-	    if(PlayerInfo[playerid][nMute] == 1) return SendClientMessage(playerid, COLOR_GREY, "Imate zabranu");
+	    if(PlayerInfo[playerid][pMute] == 1) return SendClientMessage(playerid, COLOR_GREY, "Imate zabranu");
 	    foreach(Player, i)
 	    {
-	        if(PlayerInfo[i][Helper] > 0)
+	        if(PlayerInfo[i][pHelper] > 0)
 	        {
 				new string[126];
 				format(string, sizeof(string), "[%d] %s pita: %s", playerid, PlayerName(playerid), question);
@@ -2832,7 +2835,7 @@ YCMD:n(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-	if(PlayerInfo[playerid][Helper] == 0) {
+	if(PlayerInfo[playerid][pHelper] == 0) {
 	    SendClientMessage(playerid, COLOR_GREY, "Koristi /pitaj da postavis pitanje");
 	    return 1;
 	}
@@ -2848,18 +2851,18 @@ YCMD:makehelper(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-	if(PlayerInfo[playerid][Admin] == 5 || PlayerInfo[playerid][Helper] == 3)  {
+	if(PlayerInfo[playerid][pAdmin] == 5 || PlayerInfo[playerid][pHelper] == 3)  {
 	    new target, level;
 	    if(sscanf(params, "ud", target, level)) return SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /makehelper [Deo Imena/Player ID] [0-2]");
 
 		if(level < 0 || level > 3) return 1;
 
-	    PlayerInfo[target][Helper] = level;
+	    PlayerInfo[target][pHelper] = level;
 	    new string[126];
 	    format(string, sizeof(string), "%s je postavljen na helpera level %d", PlayerName(playerid), level);
 	    SendClientMessage(target, COLOR_LIGHTBLUE, string);
 	    format(string, sizeof(string), "AdmWarning: %s je postavio igracu %s helper level na %d.", PlayerName(playerid), PlayerName(target), level);
-	    AMessage(COLOR_LIGHTRED, string);
+	    APoruka(COLOR_LIGHTRED, string);
 	}
 
 
@@ -2870,18 +2873,18 @@ YCMD:makedeveloper(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-	if(PlayerInfo[playerid][Admin] == 5 || PlayerInfo[playerid][Developer] == 3)  {
+	if(PlayerInfo[playerid][pAdmin] == 5 || PlayerInfo[playerid][pDeveloper] == 3)  {
 	    new target, level;
 	    if(sscanf(params, "ud", target, level)) return SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /makedeveloper [Deo Imena/Player ID] [0-2]");
 
 		if(level < 0 || level > 3) return 1;
 
-	    PlayerInfo[target][Developer] = level;
+	    PlayerInfo[target][pDeveloper] = level;
 	    new string[126];
 	    format(string, sizeof(string), "%s je postao level %d Developer!", PlayerName(playerid), level);
 	    SendClientMessage(target, COLOR_LIGHTBLUE, string);
 	    format(string, sizeof(string), "AdmWarning: %s je podesio %s Level %d Developera.", PlayerName(playerid), PlayerName(target), level);
-	    AMessage(COLOR_LIGHTRED, string);
+	    APoruka(COLOR_LIGHTRED, string);
 	}
 
 
@@ -2890,7 +2893,7 @@ YCMD:makedeveloper(playerid, params[])
 
 YCMD:setint(playerid, params[])
 {
-	if(PlayerInfo[playerid][Admin] >= 1) {
+	if(PlayerInfo[playerid][pAdmin] >= 1) {
 		new player, interior, string[126];
 		if(sscanf(params, "ud", player, interior)) return SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /setint [Deo Imena/Player ID] [Interior]");
 
@@ -2904,14 +2907,14 @@ YCMD:setint(playerid, params[])
 		format(string, sizeof(string), "Podesili ste igracu %s Interior na %d!", PlayerName(player), interior);
 		SendClientMessage(playerid, COLOR_LIGHTRED, string);
 		format(string, sizeof(string), "/setint ");
-		//AdminLog(string, playerid);
+		AdminLog(string, playerid);
 	}
 	return 1;
 }
 
 YCMD:ahelp(playerid, params[])
 {
-	if(PlayerInfo[playerid][Admin] == 0) return 1;
+	if(PlayerInfo[playerid][pAdmin] == 0) return 1;
 
 	SendClientMessage(playerid, COLOR_GREY, "Level 1: /kick /spec /setint /setvw /pmute");
 	SendClientMessage(playerid, COLOR_GREY, "Level 2: /goto /gethere /setskin ");
@@ -2926,7 +2929,7 @@ YCMD:noooc(playerid, params[])
 {
     if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-    if(PlayerInfo[playerid][Admin] < 4) return 1;
+    if(PlayerInfo[playerid][pAdmin] < 4) return 1;
 
     if(noooc == 1)
     {
@@ -2953,11 +2956,11 @@ YCMD:helperi(playerid, params[])
 	    new level[128], string[128];
 	    if(IsPlayerConnected(i))
 	    {
-			if(PlayerInfo[i][Helper] > 0)
+			if(PlayerInfo[i][pHelper] > 0)
 			{
-                if(PlayerInfo[i][Helper] == 1) { level = "General"; }
-				if(PlayerInfo[i][Helper] == 2) { level = "Senior"; }
-				if(PlayerInfo[i][Helper] >= 3) { level = "Head"; }
+                if(PlayerInfo[i][pHelper] == 1) { level = "General"; }
+				if(PlayerInfo[i][pHelper] == 2) { level = "Senior"; }
+				if(PlayerInfo[i][pHelper] >= 3) { level = "Head"; }
 				format(string, sizeof(string), "%s %s", level, PlayerName(i));
 				SendClientMessage(playerid, COLOR_GREY, string);
 			}
@@ -2966,7 +2969,7 @@ YCMD:helperi(playerid, params[])
 	return 1;
 }
 
-YCMD:developers(playerid, params[])
+YCMD:developeri(playerid, params[])
 {
 	if(gPlayerLoggedIn[playerid] == 0) return 1;
 
@@ -2975,11 +2978,11 @@ YCMD:developers(playerid, params[])
 	{
 	    new level[128], string[128];
 
-		if(PlayerInfo[i][Developer] > 0)
+		if(PlayerInfo[i][pDeveloper] > 0)
 		{
-		  	if(PlayerInfo[i][Developer] == 1) { level = "Junior"; }
-		  	if(PlayerInfo[i][Developer] == 2) { level = "Senior"; }
-		  	if(PlayerInfo[i][Developer] == 3) { level = "Head"; }
+		  	if(PlayerInfo[i][pDeveloper] == 1) { level = "Junior"; }
+		  	if(PlayerInfo[i][pDeveloper] == 2) { level = "Senior"; }
+		  	if(PlayerInfo[i][pDeveloper] == 3) { level = "Head"; }
 			format(string, sizeof(string), "%s %s", level, PlayerName(i));
 			SendClientMessage(playerid, COLOR_GREY, string);
 		}
@@ -2996,9 +2999,9 @@ YCMD:admini(playerid, params[])
 	{
 	    new level[128], string[128];
 
-		if(PlayerInfo[playerid][Admin] == 0 && PlayerInfo[i][Admin] > 1 /*&& AdminDuty[i] == 1*/)
+		if(PlayerInfo[playerid][pAdmin] == 0 && PlayerInfo[i][pAdmin] > 1 /*&& AdminDuty[i] == 1*/)
 		{
-		    switch(PlayerInfo[i][Admin])
+		    switch(PlayerInfo[i][pAdmin])
 		    {
 		        case 2: level = "Junior Admin";
 		        case 3: level = "General Administrator";
@@ -3008,9 +3011,9 @@ YCMD:admini(playerid, params[])
 			format(string, sizeof(string), "%s %s", level, PlayerName(i));
 			SendClientMessage(playerid, COLOR_GREY, string);
 		}
-		if(PlayerInfo[playerid][Admin] > 0)
+		if(PlayerInfo[playerid][pAdmin] > 0)
 		{
-      		switch(PlayerInfo[i][Admin])
+      		switch(PlayerInfo[i][pAdmin])
 		    {
 		        case 1: level = "Secret Admin (1)";
 		        case 2: level = "Junior Admin (2)";
@@ -3029,7 +3032,7 @@ YCMD:spec(playerid, params[])
 {
 	if(gPlayerLoggedIn[playerid] == 0) return 1;
 
-	if(PlayerInfo[playerid][Admin] >=1)
+	if(PlayerInfo[playerid][pAdmin] >=1)
 	{
 	    new player;
 	    if(sscanf(params, "u", player)) return SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /spec [Deo Imena/Player ID/off]");
@@ -3084,7 +3087,7 @@ YCMD:spec(playerid, params[])
 //--Premium Commands
 YCMD:makepremium(playerid, params[])
 {
-	if(PlayerInfo[playerid][Admin] < 5) return 1;
+	if(PlayerInfo[playerid][pAdmin] < 5) return 1;
 
 	new player, level, string[126];
 	if(sscanf(params, "ud", player, level)) return SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /makepremium [Deo Imena/Player ID] [0-1]");
@@ -3093,11 +3096,11 @@ YCMD:makepremium(playerid, params[])
 
 	if(level < 0 || level > 1) SendClientMessage(playerid, COLOR_GREY, "Koristi:{FFFFFF} /makepremium [Deo Imena/Player ID] [0-1]");
 
-	PlayerInfo[player][Premium] = level;
+	PlayerInfo[player][pPremium] = level;
 	format(string, sizeof(string), "Admin %s vas je postavio za Premium Level %d.", PlayerName(playerid), level);
 	SendClientMessage(player, COLOR_YELLOW, string);
 	format(string, sizeof(string), "AdmWarning: %s je postao level %d Premium | Premium dat od strane  %s", PlayerName(player), level, PlayerName(playerid));
-	AMessage(COLOR_LIGHTRED, string);
+	APoruka(COLOR_LIGHTRED, string);
 
 	return 1;
 }
@@ -3115,7 +3118,7 @@ public OnGameModeInit()
 	LoadCar();
 	print("     public Vozila su ucitana.");
 	LoadDCars();
-	print("     public DVozila su ucitana.");
+	print("     public Salonska vozila su ucitana.");
 
     // Fort Carson Vehicles
 	CreateVehicle(598, -216.540618, 986.924926, 19.179603, 359.869995, 55, 1, 1000); // Fort Carson Sheriff 1
@@ -3500,11 +3503,11 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			    INI_WriteInt(File, "sVW", 0);
 			    INI_WriteInt(File, "Skin", 1);
 			    INI_WriteInt(File, "Muted", 0);
-			    INI_WriteInt(File, "nMute", 0);
+			    INI_WriteInt(File, "pMute", 0);
 			    INI_WriteInt(File, "Helper", 0);
 			    INI_WriteInt(File, "Developer", 0);
 			    INI_WriteInt(File, "RentingID", 0);
-          INI_WriteInt(File, "Premium", 0);
+          		INI_WriteInt(File, "Premium", 0);
                 INI_Close(File);
                 INI_ParseFile(UserPath(playerid), "LoadUser_%s", .bExtra = true, .extra = playerid);
 				ResetPlayerMoney(playerid);
@@ -3526,7 +3529,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	            Kick(playerid);
 			}
 			if(response) {
-                if(udb_hash(inputtext) == PlayerInfo[playerid][Password])
+                if(udb_hash(inputtext) == PlayerInfo[playerid][pLozinka])
                 {
                     INI_ParseFile(UserPath(playerid), "LoadUser_%s", .bExtra = true, .extra = playerid);
 					SetPlayerHealth(playerid, PlayerInfo[playerid][sHealth]);
@@ -3548,13 +3551,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	    case 3: // Gender
 	    {
 	        if(response) {
-	            PlayerInfo[playerid][Gender] = 1; // Male
+	            PlayerInfo[playerid][pPol] = 1; // Male
 				ShowDialog(playerid, 4, DIALOG_INPUT, "Bone County Indentifikaciono Odeljenje", "Izjasnili ste se kao Musko.\n\nKoliko imate godina?", "Enter", "");
 				PlayerInfo[playerid][Skin] = 1;
 				SetSpawnInfo(playerid, 0, 1, 194.485778, 1103.993408, 16.347635, 30.403614, 0, 0, 0, 0, 0, 0);
 				}
 			else {
-			    PlayerInfo[playerid][Gender] = 2; // Female
+			    PlayerInfo[playerid][pPol] = 2; // Female
 				ShowDialog(playerid, 4, DIALOG_INPUT, "Bone County Indentifikaciono Odeljenje", "Izjasnili ste se kao Zensko.\n\nKoliko imate godina?", "Enter", "");
                 PlayerInfo[playerid][Skin] = 12;
                 SetSpawnInfo(playerid, 0, 12, 194.485778, 1103.993408, 16.347635, 30.403614, 0, 0, 0, 0, 0, 0);
@@ -3564,45 +3567,45 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	    {
 	        new age = strval(inputtext);
 	        if(!strlen(inputtext)) return ShowDialog(playerid, 4, DIALOG_INPUT, "Bone County Indentifikaciono Odeljenje", "Molimo recite koliko imate godina!", "Enter", "");
-			//if(!IsNumeric(age)) return ShowDialog(playerid, 4, DIALOG_INPUT, "Fort Carson Identification", "Please tell us how old you are!", "Enter", "");
+			//if(!IsNumeric(age)) return ShowDialog(playerid, 4, DIALOG_INPUT, "Bone County Indentifikaciono Odeljenje", "Molimo Recite koliko imate godina!", "Enter", "");
 			if(age < 13 || age > 99) return ShowDialog(playerid, 4, DIALOG_INPUT, "Bone County Indentifikaciono Odeljenje", "Molimo upisite realisticne godine (13-99)", "Enter", "");
-   			PlayerInfo[playerid][Age] = age;
-   			ShowDialog(playerid, 5, DIALOG_LIST, "Bone County Indentifikaciono Odeljenje - Odakle ste?", "Srbija\nBIH\nHrvatska\nMakedonija\nCrna Gora", "Okay", "");
+   			PlayerInfo[playerid][pGodine] = age;
+   			ShowDialog(playerid, 5, DIALOG_LIST, "Bone County Indentifikaciono Odeljenje - Odakle ste?", "Srbija\nBIH\nHrvatska\nMakedonija\nCrna Gora", "Uredu", "");
 	    }
-	    case 5: // Origin
+	    case 5: // Drzava
 	    {
 	        if(response)
 	        {
 	            switch(listitem)
 	            {
-					case 0: //America
+					case 0: //Srbija
 					{
-						PlayerInfo[playerid][Origin] = 1;
+						PlayerInfo[playerid][pDrzava] = 1;
 					}
-					case 1: //Europe
+					case 1: //BIH
 					{
-						PlayerInfo[playerid][Origin] = 2;
+						PlayerInfo[playerid][pDrzava] = 2;
 					}
-					case 2: //Australia
+					case 2: //Hrvatska
 					{
-						PlayerInfo[playerid][Origin] = 3;
+						PlayerInfo[playerid][pDrzava] = 3;
 					}
-					case 3: //Africa
+					case 3: //Makedonija
 					{
-						PlayerInfo[playerid][Origin] = 4;
+						PlayerInfo[playerid][pDrzava] = 4;
 					}
-					case 4: //Russia
+					case 4: //Crna Gora
 					{
-						PlayerInfo[playerid][Origin] = 5;
+						PlayerInfo[playerid][pDrzava] = 5;
 					}
 	            }
-				ShowDialog(playerid, 6, DIALOG_INFO, "Bone County Identifikaciono Odeljenje", "Hvala sto ste popunili formular.\n\nAko vam treba pomoc koristite /help i /pitaj.\nUkoliko ne postujete pravila dobicete odgovarajucu kaznu.\n\nPosetite forum u.izradi.com", "Okay", "");
+				ShowDialog(playerid, 6, DIALOG_INFO, "Bone County Identifikaciono Odeljenje", "Hvala sto ste popunili formular.\n\nAko vam treba pomoc koristite /help i /pitaj.\nUkoliko ne postujete pravila dobicete odgovarajucu kaznu.\n\nPosetite forum u.izradi.com", "Uredu", "");
 				gPlayerLoggedIn[playerid] = 1;
 				SpawnPlayer(playerid);
 			 }
 			 else
 			 {
-			    ShowDialog(playerid, 5, DIALOG_LIST, "Bone County Identifikaciono Odeljenje - Odakle ste?", "Srbija\nBIH\nHrvatska\nMakedonija\nCrna Gora", "Okay", "");
+			    ShowDialog(playerid, 5, DIALOG_LIST, "Bone County Identifikaciono Odeljenje - Odakle ste?", "Srbija\nBIH\nHrvatska\nMakedonija\nCrna Gora", "Uredu", "");
 			 }
 	    }
 	}
