@@ -92,7 +92,7 @@
 #define COLOR_PURPLE 0xC2A2DAAA
 #define COLOR_OOC 0xE0FFFFAA
 #define COLOR_LOCALMSG 0xEC5413AA
-
+#define COLOR_ADMIN 0xFD7E00FF
 //-------------//
 // IGRAC INFO //
 //-----------//
@@ -122,7 +122,7 @@ public 	UcitajKorisnika_data(playerid,name[],value[])
     INI_Int("Novac",IgracInfo[playerid][iNovac]);
     INI_Int("Admin",IgracInfo[playerid][iAdmin]);
     INI_Int("Vip",IgracInfo[playerid][iAdmin]);
-		INI_Int("Ubistava",IgracInfo[playerid][iUbistava]);
+	INI_Int("Ubistava",IgracInfo[playerid][iUbistava]);
     INI_Int("Smrti",IgracInfo[playerid][iSmrti]);
     return 1;
 }
@@ -172,12 +172,27 @@ public APoruka(color,const string[],alevel)
 	}
 	return 1;
 }
+forward VPoruka(color,const string[],vlevel);
+public VPoruka(color,const string[],vlevel)
+{
+	for(new i = 0; i < MAX_PLAYERS; i++)
+	{
+		if(IsPlayerConnected(i))
+		{
+			if (IgracInfo[i][iVip] >= vlevel)
+			{
+				SendClientMessage(i, color, string);
+			}
+		}
+	}
+	return 1;
+}
 main()
 {
 	print("\n----------------------------------");
-	print(" 				Wild West Roleplay				 ");
-	print("							By Radma							 ");
-	print("							 Â© 2015								 ");
+	print(" 	  Wild West Roleplay");
+	print("			   By Radma");
+	print("				© 2015");
 	print("----------------------------------\n");
 }
 
@@ -406,8 +421,8 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 INI_WriteInt(File,"Novac",0);
                 INI_WriteInt(File,"Admin",0);
                 INI_WriteInt(File,"Vip",0);
-								INI_WriteInt(File,"Ubistava",0);
-								INI_WriteInt(File,"Smrti",0);
+				INI_WriteInt(File,"Ubistava",0);
+				INI_WriteInt(File,"Smrti",0);
                 INI_Close(File);
 
                 SetSpawnInfo(playerid, 0, 0, 1958.33, 1343.12, 15.36, 269.15, 0, 0, 0, 0, 0, 0);
@@ -467,7 +482,30 @@ CMD:makevip(playerid, params[])
     else if(!IsPlayerConnected(pID)) return SCM(playerid, COLOR_LIGHTRED, "Taj igrac nije konektovan.");
 
  	format(string, sizeof(string), "VIP: %s je postavio %s vip level %d.", GetName(playerid), GetName(pID), value);
- 	APoruka(COLOR_LIGHTRED,string);
+ 	APoruka(COLOR_LIGHTRED,string, 1);
 	IgracInfo[pID][iVip] = value;
     return 1;
 }
+CMD:a(playerid, params[])
+{
+	new
+	string[144], text[144];
+	if( IgracInfo[ playerid ][ iAdmin ] < 1 ) return SCM( playerid, COLOR_GREY, "Nemate dozvolu za koriscenje ove komande.");
+	if (sscanf(params, "s[144]", text)) return SCM(playerid, COLOR_GREY, "[Usage:] /(a)dminchat [tekst]");
+
+	format(string, sizeof(string), "[Admin Chat] %s: %s", GetName(playerid), text);
+ 	APoruka(COLOR_ADMIN, string, 1);
+	return 1;
+}
+CMD:v(playerid, params[])
+{
+	new
+	string[144], text[144];
+	if( IgracInfo[ playerid ][ iAdmin ] < 1 ) return SCM( playerid, COLOR_GREY, "Nemate dozvolu za koriscenje ove komande.");
+	if (sscanf(params, "s[144]", text)) return SCM(playerid, COLOR_GREY, "[Usage:] /(a)dminchat [tekst]");
+
+	format(string, sizeof(string), "[Vip Chat] %s: %s", GetName(playerid), text);
+ 	APoruka(COLOR_ADMIN, string, 1);
+	return 1;
+}
+
