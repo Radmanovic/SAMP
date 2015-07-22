@@ -175,9 +175,9 @@ public APoruka(color,const string[],alevel)
 main()
 {
 	print("\n----------------------------------");
-	print(" 				Wild West Roleplay				 ");
-	print("							By Radma							 ");
-	print("							 © 2015								 ");
+	print("     Wild West Roleplay		   ");
+	print("		By Radma		   ");
+	print("		© 2015			   ");
 	print("----------------------------------\n");
 }
 
