@@ -101,7 +101,7 @@ enum iInfo
     iLozinka,
     iNovac,
     iAdmin,
-		iVip,
+    iVip,
     iUbistava,
     iSmrti
 }
