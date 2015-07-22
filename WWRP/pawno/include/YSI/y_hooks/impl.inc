@@ -1752,22 +1752,25 @@ public OnVehicleDamageStatusUpdate(vehicleid, playerid)
 #define OnVehicleDamageStatusUpdate S@@_OnVehicleDamageStatusUpdate
 HOOK_FORWARD<VehicleDamageStatusUpdate>
 
-public OnUnoccupiedVehicleUpdate(vehicleid, playerid, passenger_seat)
+public OnUnoccupiedVehicleUpdate(vehicleid, playerid, passenger_seat, Float:new_x, Float:new_y, Float:new_z)
 {
-	P:2("Hooks_OnUnoccupiedVehicleUpdate called: %d, %d, %d", vehicleid, playerid, passenger_seat);
+	P:2("Hooks_OnUnoccupiedVehicleUpdate called: %d, %d, %d, %f, %f, %f", vehicleid, playerid, passenger_seat, new_x, new_y, new_z);
 	new
 		end   = _:YSI_g_sCallbackEnd[ALS_OnUnoccupiedVehicleUpdate],
 		start = _:YSI_g_sCallbackStart[ALS_OnUnoccupiedVehicleUpdate],
 		ret = ALS_R_UnoccupiedVehicleUpdate;
 	while (start++ != end)
 	{
+		#emit PUSH.S new_z
+		#emit PUSH.S new_y
+		#emit PUSH.S new_x
 		#emit PUSH.S passenger_seat
 		#emit PUSH.S playerid
 		#emit PUSH.S vehicleid
 		// I wonder if I could hack the stack with a negative number so that when
 		// the called function returns it puts all the header data BACK on to the
 		// stack instead of removing the parameters and header.
-		#emit PUSH.C     12
+		#emit PUSH.C     24
 		#emit CONST.alt  YSI_g_sCallbackAddresses
 		#emit LOAD.S.pri start
 		//#emit INC.pri
@@ -2333,20 +2336,21 @@ public OnPlayerClickPlayer(playerid, clickedplayerid, source)
 #define OnPlayerClickPlayer S@@_OnPlayerClickPlayer
 HOOK_FORWARD<PlayerClickPlayer>
 
-public OnPlayerTakeDamage(playerid, issuerid, Float:amount, weaponid)
+public OnPlayerTakeDamage(playerid, issuerid, Float:amount, weaponid, bodypart)
 {
-	P:2("Hooks_OnPlayerTakeDamage called: %d, %d, %f, %d", playerid, issuerid, Float:amount, weaponid);
+	P:2("Hooks_OnPlayerTakeDamage called: %d, %d, %f, %d, %d", playerid, issuerid, Float:amount, weaponid, bodypart);
 	new
 		end   = _:YSI_g_sCallbackEnd[ALS_OnPlayerTakeDamage],
 		start = _:YSI_g_sCallbackStart[ALS_OnPlayerTakeDamage],
 		ret = ALS_R_PlayerTakeDamage;
 	while (start++ != end)
 	{
+		#emit PUSH.S bodypart
 		#emit PUSH.S weaponid
 		#emit PUSH.S amount
 		#emit PUSH.S issuerid
 		#emit PUSH.S playerid
-		#emit PUSH.C     16
+		#emit PUSH.C     20
 		#emit CONST.alt  YSI_g_sCallbackAddresses
 		#emit LOAD.S.pri start
 		//#emit INC.pri
@@ -2379,20 +2383,21 @@ public OnPlayerTakeDamage(playerid, issuerid, Float:amount, weaponid)
 #define OnPlayerTakeDamage S@@_OnPlayerTakeDamage
 HOOK_FORWARD<PlayerTakeDamage>
 
-public OnPlayerGiveDamage(playerid, damagedid, Float:amount, weaponid)
+public OnPlayerGiveDamage(playerid, damagedid, Float:amount, weaponid, bodypart)
 {
-	P:2("Hooks_OnPlayerGiveDamage called: %d, %d, %f, %d", playerid, damagedid, Float:amount, weaponid);
+	P:2("Hooks_OnPlayerGiveDamage called: %d, %d, %f, %d, %d", playerid, damagedid, Float:amount, weaponid, bodypart);
 	new
 		end   = _:YSI_g_sCallbackEnd[ALS_OnPlayerGiveDamage],
 		start = _:YSI_g_sCallbackStart[ALS_OnPlayerGiveDamage],
 		ret = ALS_R_PlayerGiveDamage;
 	while (start++ != end)
 	{
+		#emit PUSH.S bodypart
 		#emit PUSH.S weaponid
 		#emit PUSH.S amount
 		#emit PUSH.S damagedid
 		#emit PUSH.S playerid
-		#emit PUSH.C     16
+		#emit PUSH.C     20
 		#emit CONST.alt  YSI_g_sCallbackAddresses
 		#emit LOAD.S.pri start
 		//#emit INC.pri

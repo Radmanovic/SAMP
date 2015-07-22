@@ -1604,3 +1604,159 @@ v0.3.7, (C)2005-2015 SA-MP Team
 [16:43:31] Incoming connection: 127.0.0.1:52283 id: 0
 [16:43:31] [join] Nikola_Radmanovic has joined the server (0:127.0.0.1)
 [16:52:56] [part] Nikola_Radmanovic has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7, (C)2005-2015 SA-MP Team
+
+[18:12:34] filterscripts = ""  (string)
+[18:12:34] 
+[18:12:34] Server Plugins
+[18:12:34] --------------
+[18:12:34]  Loading plugin: sscanf
+[18:12:34] 
+
+[18:12:34]  ===============================
+
+[18:12:34]       sscanf plugin loaded.     
+
+[18:12:34]          Version:  2.8.1        
+
+[18:12:34]    (c) 2012 Alex "Y_Less" Cole  
+
+[18:12:34]  ===============================
+
+[18:12:34]   Loaded.
+[18:12:34]  Loading plugin: streamer
+[18:12:34] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[18:12:34]   Loaded.
+[18:12:34]  Loaded 2 plugins.
+
+[18:12:34] 
+[18:12:34] Filterscripts
+[18:12:34] ---------------
+[18:12:34]   Loaded 0 filterscripts.
+
+[18:12:35]  
+[18:12:35]  
+[18:12:35]  
+[18:12:35]  ======================================= 
+[18:12:35]  |                                     | 
+[18:12:35]  |        YSI version 3.09.0684        | 
+[18:12:35]  |        By Alex "Y_Less" Cole        | 
+[18:12:35]  |                                     | 
+[18:12:35]  ======================================= 
+[18:12:35]  
+[18:12:35]  
+[18:12:35]  
+[18:12:35]   Loaded 0 vehicles
+[18:12:35]   Loaded 0 dealerships
+[18:12:35]   Loaded 5 fuel stations
+[18:12:44]  _____________________
+[18:12:44]  San Jose Roleplay
+[18:12:44]  scripted by chrillzen
+[18:12:44]  
+[18:12:44] Number of vehicle models: 20
+[18:13:46] [connection] 127.0.0.1:50914 requests connection cookie.
+[18:13:47] Incoming connection: 127.0.0.1:50914 id: 0
+[18:13:47] [join] Nikola_Radmanovic has joined the server (0:127.0.0.1)
+[18:15:14] RCON (In-Game): Player #0 (Nikola_Radmanovic) failed login.
+[18:15:18] RCON (In-Game): Player #0 (Nikola_Radmanovic) failed login.
+[18:15:39] RCON (In-Game): Player #0 (Nikola_Radmanovic) has logged in.
+[18:17:08] [part] Nikola_Radmanovic has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7, (C)2005-2015 SA-MP Team
+
+[20:09:27] filterscripts = ""  (string)
+[20:09:27] 
+[20:09:27] Server Plugins
+[20:09:27] --------------
+[20:09:27]  Loading plugin: sscanf
+[20:09:27] 
+
+[20:09:27]  ===============================
+
+[20:09:27]       sscanf plugin loaded.     
+
+[20:09:27]          Version:  2.8.1        
+
+[20:09:27]    (c) 2012 Alex "Y_Less" Cole  
+
+[20:09:27]  ===============================
+
+[20:09:27]   Loaded.
+[20:09:27]  Loading plugin: streamer
+[20:09:27] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[20:09:27]   Loaded.
+[20:09:27]  Loaded 2 plugins.
+
+[20:09:27] 
+[20:09:27] Filterscripts
+[20:09:27] ---------------
+[20:09:27]   Loaded 0 filterscripts.
+
+[20:09:28]  
+[20:09:28]  
+[20:09:28]  
+[20:09:28]  ======================================= 
+[20:09:28]  |                                     | 
+[20:09:28]  |        YSI version 3.09.0684        | 
+[20:09:28]  |        By Alex "Y_Less" Cole        | 
+[20:09:28]  |                                     | 
+[20:09:28]  ======================================= 
+[20:09:28]  
+[20:09:28]  
+[20:09:28]  
+[20:09:28]   Loaded 0 vehicles
+[20:09:28]   Loaded 0 dealerships
+[20:09:28]   Loaded 5 fuel stations
+[20:09:36]  _____________________
+[20:09:36]  San Jose Roleplay
+[20:09:36]  scripted by chrillzen
+[20:09:36]  
+[20:09:36] Number of vehicle models: 20
+[20:11:14] [connection] 127.0.0.1:60545 requests connection cookie.
+[20:11:15] Incoming connection: 127.0.0.1:60545 id: 0
+[20:11:15] [join] Nikola_Radmanovic has joined the server (0:127.0.0.1)
+[20:59:05] [part] Nikola_Radmanovic has left the server (0:1)
+[21:02:36] [connection] 127.0.0.1:54297 requests connection cookie.
+[21:02:37] Incoming connection: 127.0.0.1:54297 id: 0
+[21:02:38] [join] Nikola_Radmanovic has joined the server (0:127.0.0.1)
+[21:13:06] RCON (In-Game): Player #0 (Nikola_Radmanovic) has logged in.
+[21:13:40]  
+[21:13:40]  
+[21:13:40]  
+[21:13:40]  ======================================= 
+[21:13:40]  |                                     | 
+[21:13:40]  |        YSI version 3.09.0684        | 
+[21:13:40]  |        By Alex "Y_Less" Cole        | 
+[21:13:40]  |                                     | 
+[21:13:40]  ======================================= 
+[21:13:40]  
+[21:13:40]  
+[21:13:40]  
+[21:13:41]   Loaded 0 vehicles
+[21:13:41]   Loaded 1 dealerships
+[21:13:41]   Loaded 5 fuel stations
+[21:13:48]  _____________________
+[21:13:48]  San Jose Roleplay
+[21:13:48]  scripted by chrillzen
+[21:13:48]  
+[21:13:48] Number of vehicle models: 20
+[21:14:18] [part] Nikola_Radmanovic has left the server (0:1)
