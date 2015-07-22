@@ -1,16 +1,14 @@
-
-<<<<<<< HEAD
-///////////////////////////////////////////////////////////////////////////////
-//                 WILD WEST ROLE-PLAY                                       //
-//                    Gamemode                                               //
-//                  Version 0.0.1                                            //
-//                  sa-mp version 0.3.7                                      //
-//                  by Radmanovic                                            //
-//                   2015                                                        //
-////////////////////////////////////////////////////////////////////////////////
+#______________________________________________________________________________
+#|                 WILD WEST ROLE-PLAY                                        |
+#|                     Gamemode                                               |
+#|                   Version 0.0.1                                            |
+#|                  sa-mp version 0.3.7                                       |
+#|                    by Radmanovic                                           |
+#|                       2015                                                 |
+#______________________________________________________________________________
 
 Ovo je projekat San Andreas Multiplayer Role-play Gamemoda
-======
+
 Ideju za ovaj gamemode sam dobio igrajuci igricu Red Dead Redemption
 
 Radnja ovog Gamemoda pocinje na Divljem Zapadu
