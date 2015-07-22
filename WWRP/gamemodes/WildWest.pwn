@@ -11,7 +11,7 @@
 #include <YSI\y_ini>
 #include <sscanf2>
 #include <YSI\y_commands>
-
+#include <SmartChat>
 
 
 //-----------//
@@ -93,6 +93,9 @@
 #define COLOR_OOC 0xE0FFFFAA
 #define COLOR_LOCALMSG 0xEC5413AA
 #define COLOR_ADMIN 0xFD7E00FF
+#define MESSAGE_COLOR 0xEEEEEEFF
+#define ECHO_COLOR 0xEEEEEEFF
+#define ACTION_COLOR 0x00CC00
 //-------------//
 // IGRAC INFO //
 //-----------//
@@ -102,7 +105,10 @@ enum iInfo
     iNovac,
     iAdmin,
     iVip,
-    iUbistava,
+	iPromoter,
+	iHelper,
+	iDeveloper,
+	iUbistava,
     iSmrti
 }
 
@@ -121,7 +127,10 @@ public 	UcitajKorisnika_data(playerid,name[],value[])
     INI_Int("Lozinka",IgracInfo[playerid][iLozinka]);
     INI_Int("Novac",IgracInfo[playerid][iNovac]);
     INI_Int("Admin",IgracInfo[playerid][iAdmin]);
-    INI_Int("Vip",IgracInfo[playerid][iAdmin]);
+    INI_Int("Vip",IgracInfo[playerid][iVip]);
+    INI_Int("Promoter",IgracInfo[playerid][iPromoter]);
+    INI_Int("Helper",IgracInfo[playerid][iHelper]);
+    INI_Int("Developer",IgracInfo[playerid][iDeveloper]);
 	INI_Int("Ubistava",IgracInfo[playerid][iUbistava]);
     INI_Int("Smrti",IgracInfo[playerid][iSmrti]);
     return 1;
@@ -187,12 +196,57 @@ public VPoruka(color,const string[],vlevel)
 	}
 	return 1;
 }
+forward HPoruka(color,const string[],hlevel);
+public HPoruka(color,const string[],hlevel)
+{
+	for(new i = 0; i < MAX_PLAYERS; i++)
+	{
+		if(IsPlayerConnected(i))
+		{
+			if (IgracInfo[i][iHelper] >= hlevel)
+			{
+				SendClientMessage(i, color, string);
+			}
+		}
+	}
+	return 1;
+}
+forward PPoruka(color,const string[],plevel);
+public PPoruka(color,const string[],plevel)
+{
+	for(new i = 0; i < MAX_PLAYERS; i++)
+	{
+		if(IsPlayerConnected(i))
+		{
+			if (IgracInfo[i][iPromoter] >= plevel)
+			{
+				SendClientMessage(i, color, string);
+			}
+		}
+	}
+	return 1;
+}
+forward DPoruka(color,const string[],dlevel);
+public DPoruka(color,const string[],dlevel)
+{
+	for(new i = 0; i < MAX_PLAYERS; i++)
+	{
+		if(IsPlayerConnected(i))
+		{
+			if (IgracInfo[i][iDeveloper] >= dlevel)
+			{
+				SendClientMessage(i, color, string);
+			}
+		}
+	}
+	return 1;
+}
 main()
 {
 	print("\n----------------------------------");
 	print("     Wild West Roleplay		   ");
 	print("		By Radma		   ");
-	print("		Â© 2015			   ");
+	print("		© 2015			   ");
 	print("----------------------------------\n");
 }
 
@@ -237,6 +291,9 @@ public OnPlayerDisconnect(playerid, reason)
 	INI_WriteInt(File,"Novac",GetPlayerMoney(playerid));
 	INI_WriteInt(File,"Admin",IgracInfo[playerid][iAdmin]);
 	INI_WriteInt(File,"Vip",IgracInfo[playerid][iVip]);
+    INI_WriteInt(File,"Promoter",IgracInfo[playerid][iPromoter]);
+    INI_WriteInt(File,"Helper",IgracInfo[playerid][iHelper]);
+    INI_WriteInt(File,"Developer",IgracInfo[playerid][iDeveloper]);
 	INI_WriteInt(File,"Ubistava",IgracInfo[playerid][iUbistava]);
 	INI_WriteInt(File,"Smrti",IgracInfo[playerid][iSmrti]);
 	INI_Close(File);
@@ -421,6 +478,9 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 INI_WriteInt(File,"Novac",0);
                 INI_WriteInt(File,"Admin",0);
                 INI_WriteInt(File,"Vip",0);
+                INI_WriteInt(File,"Promoter",0);
+                INI_WriteInt(File,"Helper",0);
+                INI_WriteInt(File,"Developer",0);
 				INI_WriteInt(File,"Ubistava",0);
 				INI_WriteInt(File,"Smrti",0);
                 INI_Close(File);
@@ -486,25 +546,86 @@ CMD:makevip(playerid, params[])
 	IgracInfo[pID][iVip] = value;
     return 1;
 }
+CMD:makepromoter(playerid, params[])
+{
+    new
+	pID, value, string[124];
+
+    if(IgracInfo[playerid][iAdmin] < 3 && !IsPlayerAdmin(playerid)) return SCM( playerid, COLOR_GREY, "Nemate dozvolu za upotrebu ove komande.");
+    else if (sscanf(params, "ui", pID, value)) return SCM(playerid, COLOR_GREY, "[Koristi:] /makepromoter [playerid/DeoImena] [level 0-1].");
+    else if (value < 0 || value > 1) return SCM(playerid, COLOR_LIGHTRED, "Invalid promoter level, 0-1.");
+    else if(!IsPlayerConnected(pID)) return SCM(playerid, COLOR_LIGHTRED, "Taj igrac nije konektovan.");
+
+ 	format(string, sizeof(string), "PROMOTER: %s je postavio igracu %s promoter level %d.", GetName(playerid), GetName(pID), value);
+ 	APoruka(COLOR_LIGHTRED,string, 1);
+	IgracInfo[pID][iPromoter] = value;
+    return 1;
+}
+CMD:makedeveloper(playerid, params[])
+{
+    new
+	pID, value, string[124];
+
+    if(IgracInfo[playerid][iAdmin] < 6 && !IsPlayerAdmin(playerid)) return SCM( playerid, COLOR_GREY, "Nemate dozvolu za upotrebu ove komande.");
+    else if (sscanf(params, "ui", pID, value)) return SCM(playerid, COLOR_GREY, "[Koristi:] /makedeveloper [playerid/DeoImena] [level 0-1].");
+    else if (value < 0 || value > 1) return SCM(playerid, COLOR_LIGHTRED, "Invalid promoter level, 0-1.");
+    else if(!IsPlayerConnected(pID)) return SCM(playerid, COLOR_LIGHTRED, "Taj igrac nije konektovan.");
+
+ 	format(string, sizeof(string), "DEV: %s je postavio igracu %s developer level %d.", GetName(playerid), GetName(pID), value);
+ 	APoruka(COLOR_LIGHTRED,string, 1);
+	IgracInfo[pID][iDeveloper] = value;
+    return 1;
+}
+CMD:makehelper(playerid, params[])
+{
+    new
+	pID, value, string[124];
+
+    if(IgracInfo[playerid][iAdmin] < 5 && !IsPlayerAdmin(playerid)) return SCM( playerid, COLOR_GREY, "Nemate dozvolu za upotrebu ove komande.");
+    else if (sscanf(params, "ui", pID, value)) return SCM(playerid, COLOR_GREY, "[Koristi:] /makehelper [playerid/DeoImena] [level 0-2].");
+    else if (value < 0 || value > 2) return SCM(playerid, COLOR_LIGHTRED, "Invalid promoter level, 0-1.");
+    else if(!IsPlayerConnected(pID)) return SCM(playerid, COLOR_LIGHTRED, "Taj igrac nije konektovan.");
+
+ 	format(string, sizeof(string), "Helper: %s je postavio igracu %s helper level %d.", GetName(playerid), GetName(pID), value);
+ 	APoruka(COLOR_LIGHTRED,string, 1);
+	IgracInfo[pID][iHelper] = value;
+    return 1;
+}
 CMD:a(playerid, params[])
 {
 	new
 	string[144], text[144];
-	if( IgracInfo[ playerid ][ iAdmin ] < 1 ) return SCM( playerid, COLOR_GREY, "Nemate dozvolu za koriscenje ove komande.");
-	if (sscanf(params, "s[144]", text)) return SCM(playerid, COLOR_GREY, "[Usage:] /(a)dminchat [tekst]");
+	if( IgracInfo[ playerid ][ iAdmin ] < 1 && IgracInfo[playerid][iHelper] < 1 && IgracInfo[playerid][iDeveloper] < 1) return SCM( playerid, COLOR_GREY, "Nemate dozvolu za koriscenje ove komande.");
+	if (sscanf(params, "s[144]", text)) return SCM(playerid, COLOR_GREY, "[Koristi:] /(a)dminchat [tekst]");
 
 	format(string, sizeof(string), "[Admin Chat] %s: %s", GetName(playerid), text);
  	APoruka(COLOR_ADMIN, string, 1);
+	DPoruka(COLOR_ADMIN, string, 1);
+	HPoruka(COLOR_ADMIN, string, 1);
 	return 1;
 }
-CMD:v(playerid, params[])
+CMD:vip(playerid, params[])
 {
 	new
 	string[144], text[144];
-	if( IgracInfo[ playerid ][ iAdmin ] < 1 ) return SCM( playerid, COLOR_GREY, "Nemate dozvolu za koriscenje ove komande.");
-	if (sscanf(params, "s[144]", text)) return SCM(playerid, COLOR_GREY, "[Usage:] /(a)dminchat [tekst]");
-
+	if( IgracInfo[ playerid ][ iVip ] < 1 && IgracInfo[playerid][iHelper] < 1 && IgracInfo[playerid][iAdmin] < 1 && IgracInfo[playerid][iPromoter] < 1 && IgracInfo[playerid][iDeveloper] < 1) return SCM( playerid, COLOR_GREY, "Nemate dozvolu za koriscenje ove komande.");
+	if (sscanf(params, "s[144]", text)) return SCM(playerid, COLOR_GREY, "[Koristi:] /(vip)chat [tekst]");
 	format(string, sizeof(string), "[Vip Chat] %s: %s", GetName(playerid), text);
+ 	VPoruka(COLOR_ADMIN, string, 1);
  	APoruka(COLOR_ADMIN, string, 1);
+	HPoruka(COLOR_ADMIN, string, 1);
+	PPoruka(COLOR_ADMIN, string, 1);
+	DPoruka(COLOR_ADMIN, string, 1);
+	return 1;
+}
+CMD:dev(playerid, params[])
+{
+	new
+	string[144], text[144];
+	if( IgracInfo[ playerid ][ iAdmin ] < 3 && IgracInfo[playerid][iDeveloper] < 1 ) return SCM( playerid, COLOR_GREY, "Nemate dozvolu za koriscenje ove komande.");
+	if (sscanf(params, "s[144]", text)) return SCM(playerid, COLOR_GREY, "[Koristi:] /(dev)eloperchat [tekst]");
+	format(string, sizeof(string), "[Developer Chat] %s: %s", GetName(playerid), text);
+ 	APoruka(COLOR_ADMIN, string, 1);
+	DPoruka(COLOR_ADMIN, string, 1);
 	return 1;
 }

@@ -1885,3 +1885,133 @@ v0.3.7, (C)2005-2015 SA-MP Team
 [15:19:35] [join] Nikola_Radmanovic has joined the server (0:127.0.0.1)
 [15:19:51] RCON (In-Game): Player #0 (Nikola_Radmanovic) has logged in.
 [15:21:41] [part] Nikola_Radmanovic has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7, (C)2005-2015 SA-MP Team
+
+[23:07:16] 
+[23:07:16] Server Plugins
+[23:07:16] --------------
+[23:07:16]  Loading plugin: sscanf
+[23:07:16] 
+
+[23:07:16]  ===============================
+
+[23:07:16]       sscanf plugin loaded.     
+
+[23:07:16]          Version:  2.8.1        
+
+[23:07:16]    (c) 2012 Alex "Y_Less" Cole  
+
+[23:07:16]  ===============================
+
+[23:07:16]   Loaded.
+[23:07:16]  Loading plugin: streamer
+[23:07:16] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[23:07:16]   Loaded.
+[23:07:16]  Loaded 2 plugins.
+
+[23:07:16] 
+[23:07:16] Filterscripts
+[23:07:16] ---------------
+[23:07:16]   Loading filterscript 'a_actor.amx'...
+[23:07:16]   Loaded 1 filterscripts.
+
+[23:07:17]  
+[23:07:17]  
+[23:07:17]  
+[23:07:17]  ======================================= 
+[23:07:17]  |                                     | 
+[23:07:17]  |        YSI version 3.09.0684        | 
+[23:07:17]  |        By Alex "Y_Less" Cole        | 
+[23:07:17]  |                                     | 
+[23:07:17]  ======================================= 
+[23:07:17]  
+[23:07:17]  
+[23:07:17]  
+[23:07:17] 
+----------------------------------
+[23:07:17]      Wild West Roleplay		   
+[23:07:17] 		By Radma		   
+[23:07:17] 		Â© 2015			   
+[23:07:17] ----------------------------------
+
+[23:07:17] Number of vehicle models: 1
+[23:09:30] [connection] 127.0.0.1:58375 requests connection cookie.
+[23:09:31] Incoming connection: 127.0.0.1:58375 id: 0
+[23:09:31] [join] Nikola_Radmanovic has joined the server (0:127.0.0.1)
+[23:12:21] RCON (In-Game): Player #0 (Nikola_Radmanovic) has logged in.
+[23:15:39] [part] Nikola_Radmanovic has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7, (C)2005-2015 SA-MP Team
+
+[23:51:24] 
+[23:51:24] Server Plugins
+[23:51:24] --------------
+[23:51:24]  Loading plugin: sscanf
+[23:51:24] 
+
+[23:51:24]  ===============================
+
+[23:51:24]       sscanf plugin loaded.     
+
+[23:51:24]          Version:  2.8.1        
+
+[23:51:24]    (c) 2012 Alex "Y_Less" Cole  
+
+[23:51:24]  ===============================
+
+[23:51:24]   Loaded.
+[23:51:24]  Loading plugin: streamer
+[23:51:24] 
+
+*** Streamer Plugin v2.7.2 by Incognito loaded ***
+
+[23:51:24]   Loaded.
+[23:51:24]  Loaded 2 plugins.
+
+[23:51:24] 
+[23:51:24] Filterscripts
+[23:51:24] ---------------
+[23:51:24]   Loading filterscript 'a_actor.amx'...
+[23:51:24]   Loaded 1 filterscripts.
+
+[23:51:24]  
+[23:51:24]  
+[23:51:24]  
+[23:51:24]  ======================================= 
+[23:51:24]  |                                     | 
+[23:51:24]  |        YSI version 3.09.0684        | 
+[23:51:24]  |        By Alex "Y_Less" Cole        | 
+[23:51:24]  |                                     | 
+[23:51:24]  ======================================= 
+[23:51:24]  
+[23:51:24]  
+[23:51:24]  
+[23:51:24] 
+----------------------------------
+[23:51:24]      Wild West Roleplay		   
+[23:51:24] 		By Radma		   
+[23:51:24] 		© 2015			   
+[23:51:24] ----------------------------------
+
+[23:51:24] Number of vehicle models: 1
+[23:52:02] [connection] 127.0.0.1:52403 requests connection cookie.
+[23:52:03] Incoming connection: 127.0.0.1:52403 id: 0
+[23:52:03] [join] Nikola_Radmanovic has joined the server (0:127.0.0.1)
+[23:52:20] RCON (In-Game): Player #0 (Nikola_Radmanovic) has logged in.
+[23:55:46] [part] Nikola_Radmanovic has left the server (0:1)
