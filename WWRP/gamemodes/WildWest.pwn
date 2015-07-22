@@ -190,9 +190,9 @@ public VPoruka(color,const string[],vlevel)
 main()
 {
 	print("\n----------------------------------");
-	print(" 	  Wild West Roleplay");
-	print("			   By Radma");
-	print("				© 2015");
+	print("     Wild West Roleplay		   ");
+	print("		By Radma		   ");
+	print("		Â© 2015			   ");
 	print("----------------------------------\n");
 }
 
@@ -508,4 +508,3 @@ CMD:v(playerid, params[])
  	APoruka(COLOR_ADMIN, string, 1);
 	return 1;
 }
-
