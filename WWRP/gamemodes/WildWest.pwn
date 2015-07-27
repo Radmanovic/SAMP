@@ -1,7 +1,7 @@
 //--------------------------------------------------------//
-//							Wild West Roleplay                       //
-//							Coded by Radma            							//
-//							http://www.github.com/Radmanovic 	     //
+//		Wild West Roleplay                       //
+//		Coded by Radma            		//
+//	 http://www.github.com/Radmanovic 	       //
 //----------------------------------------------------//
 
 //-----------//
@@ -105,10 +105,10 @@ enum iInfo
     iNovac,
     iAdmin,
     iVip,
-	iPromoter,
-	iHelper,
-	iDeveloper,
-	iUbistava,
+    iPromoter,
+    iHelper,
+    iDeveloper,
+    iUbistava,
     iSmrti
 }
 
@@ -131,7 +131,7 @@ public 	UcitajKorisnika_data(playerid,name[],value[])
     INI_Int("Promoter",IgracInfo[playerid][iPromoter]);
     INI_Int("Helper",IgracInfo[playerid][iHelper]);
     INI_Int("Developer",IgracInfo[playerid][iDeveloper]);
-	INI_Int("Ubistava",IgracInfo[playerid][iUbistava]);
+    INI_Int("Ubistava",IgracInfo[playerid][iUbistava]);
     INI_Int("Smrti",IgracInfo[playerid][iSmrti]);
     return 1;
 }
@@ -246,7 +246,7 @@ main()
 	print("\n----------------------------------");
 	print("     Wild West Roleplay		   ");
 	print("		By Radma		   ");
-	print("		© 2015			   ");
+	print("		Â© 2015			   ");
 	print("----------------------------------\n");
 }
 
@@ -291,9 +291,9 @@ public OnPlayerDisconnect(playerid, reason)
 	INI_WriteInt(File,"Novac",GetPlayerMoney(playerid));
 	INI_WriteInt(File,"Admin",IgracInfo[playerid][iAdmin]);
 	INI_WriteInt(File,"Vip",IgracInfo[playerid][iVip]);
-    INI_WriteInt(File,"Promoter",IgracInfo[playerid][iPromoter]);
-    INI_WriteInt(File,"Helper",IgracInfo[playerid][iHelper]);
-    INI_WriteInt(File,"Developer",IgracInfo[playerid][iDeveloper]);
+    	INI_WriteInt(File,"Promoter",IgracInfo[playerid][iPromoter]);
+    	INI_WriteInt(File,"Helper",IgracInfo[playerid][iHelper]);
+    	INI_WriteInt(File,"Developer",IgracInfo[playerid][iDeveloper]);
 	INI_WriteInt(File,"Ubistava",IgracInfo[playerid][iUbistava]);
 	INI_WriteInt(File,"Smrti",IgracInfo[playerid][iSmrti]);
 	INI_Close(File);
@@ -481,13 +481,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 INI_WriteInt(File,"Promoter",0);
                 INI_WriteInt(File,"Helper",0);
                 INI_WriteInt(File,"Developer",0);
-				INI_WriteInt(File,"Ubistava",0);
-				INI_WriteInt(File,"Smrti",0);
+		INI_WriteInt(File,"Ubistava",0);
+		INI_WriteInt(File,"Smrti",0);
                 INI_Close(File);
 
                 SetSpawnInfo(playerid, 0, 0, 1958.33, 1343.12, 15.36, 269.15, 0, 0, 0, 0, 0, 0);
                 SpawnPlayer(playerid);
-                ShowPlayerDialog(playerid, DIALOG_SUCCESS_1, DIALOG_STYLE_MSGBOX,""COL_BELA"Uspesno!",""COL_ZELENA"Great! Your Y_INI system works perfectly. Relog to save your stats!","Ok","");
+                //ShowPlayerDialog(playerid, DIALOG_SUCCESS_1, DIALOG_STYLE_MSGBOX,""COL_BELA"Uspesno!",""COL_ZELENA"Great! Your Y_INI system works perfectly. Relog to save your stats!","Ok","");
 			}
         }
 
@@ -499,7 +499,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 if(udb_hash(inputtext) == IgracInfo[playerid][iLozinka]){
                     INI_ParseFile(UserPath(playerid), "LoadUser_%s", .bExtra = true, .extra = playerid);
                     GivePlayerMoney(playerid, IgracInfo[playerid][iNovac]);
-					ShowPlayerDialog(playerid, DIALOG_SUCCESS_2, DIALOG_STYLE_MSGBOX,""COL_BELA"Uspesno!",""COL_ZELENA"Uspesno ste se ulogovali!","Ok","");
+		    //ShowPlayerDialog(playerid, DIALOG_SUCCESS_2, DIALOG_STYLE_MSGBOX,""COL_BELA"Uspesno!",""COL_ZELENA"Uspesno ste se ulogovali!","Ok","");
                 }
                 else
                 {
